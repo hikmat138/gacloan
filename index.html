@@ -5,136 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GACLOAN - Games Ceria Logika Anak</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Fredoka', 'Nunito', sans-serif;
-      background-color: #EBF8FF;
+      font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at top left, #EFF6FF, #EEF2FF, #F0FDF4);
       user-select: none;
+      -webkit-user-select: none;
     }
     
+    /* Modern Neomorphic 3D Buttons */
     .btn-3d {
-      transition: all 0.1s ease;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
     }
     .btn-3d:active {
-      transform: translateY(6px) !important;
-      box-shadow: 0 0 0 transparent !important;
+      transform: translateY(4px) scale(0.98) !important;
+      box-shadow: 0 2px 0 transparent !important;
     }
     
-    .btn-3d-yellow {
-      background-color: #FBBF24;
-      border: 3px solid #B45309;
-      box-shadow: 0 6px 0 #B45309;
-      color: #78350F;
+    .btn-3d-emerald {
+      background: linear-gradient(180deg, #34D399 0%, #10B981 100%);
+      border: 2px solid #059669;
+      box-shadow: 0 6px 0 #047857, 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+      color: #FFFFFF;
     }
-    .btn-3d-green {
-      background-color: #34D399;
-      border: 3px solid #065F46;
-      box-shadow: 0 6px 0 #065F46;
-      color: #064E3B;
+    .btn-3d-amber {
+      background: linear-gradient(180deg, #FBBF24 0%, #F59E0B 100%);
+      border: 2px solid #D97706;
+      box-shadow: 0 6px 0 #B45309, 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+      color: #FFFFFF;
     }
-    .btn-3d-blue {
-      background-color: #60A5FA;
-      border: 3px solid #1E40AF;
-      box-shadow: 0 6px 0 #1E40AF;
-      color: #1E3A8A;
+    .btn-3d-indigo {
+      background: linear-gradient(180deg, #818CF8 0%, #6366F1 100%);
+      border: 2px solid #4F46E5;
+      box-shadow: 0 6px 0 #3730A3, 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+      color: #FFFFFF;
     }
-    .btn-3d-purple {
-      background-color: #C084FC;
-      border: 3px solid #6B21A8;
-      box-shadow: 0 6px 0 #6B21A8;
-      color: #581C87;
+    .btn-3d-rose {
+      background: linear-gradient(180deg, #FB7185 0%, #F43F5E 100%);
+      border: 2px solid #E11D48;
+      box-shadow: 0 6px 0 #9F1239, 0 10px 15px -3px rgba(244, 63, 94, 0.3);
+      color: #FFFFFF;
     }
-    .btn-3d-red {
-      background-color: #F87171;
-      border: 3px solid #991B1B;
-      box-shadow: 0 6px 0 #991B1B;
-      color: #7F1D1D;
-    }
-    .btn-3d-gray {
-      background-color: #9CA3AF;
-      border: 3px solid #374151;
-      box-shadow: 0 6px 0 #374151;
-      color: #1F2937;
+    .btn-3d-slate {
+      background: linear-gradient(180deg, #94A3B8 0%, #64748B 100%);
+      border: 2px solid #475569;
+      box-shadow: 0 6px 0 #334155;
+      color: #FFFFFF;
     }
 
-    .game-card {
-      background: white;
-      border: 4px solid #E5E7EB;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-      border-radius: 1.5rem;
+    /* Modern Glass Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(16px);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      border-radius: 2rem;
     }
 
     .drop-zone {
-      border: 3px dashed #9CA3AF;
-      background: #F3F4F6;
-      transition: all 0.2s;
+      border: 2.5px dashed #CBD5E1;
+      background: #F8FAFC;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .drop-zone.hovered {
-      background: #FEF08A;
-      border-color: #EAB308;
+      background: #FEF3C7;
+      border-color: #F59E0B;
+      transform: scale(1.05);
     }
     .drop-zone.filled {
-      border: 3px solid #10B981;
-      background: #D1FAE5;
+      border: 2.5px solid #10B981;
+      background: #ECFDF5;
+      color: #065F46;
     }
 
-    @keyframes bounce-gentle {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
     }
-    .animate-bounce-gentle {
-      animation: bounce-gentle 2s infinite ease-in-out;
+    .animate-float {
+      animation: float-gentle 4s ease-in-out infinite;
     }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-blue-100 via-yellow-50 to-green-100 p-2 sm:p-4 text-slate-800">
+<body class="min-h-screen p-3 sm:p-6 text-slate-800 flex flex-col justify-between">
 
   <!-- APP CONTAINER -->
-  <div class="max-w-4xl mx-auto min-h-[92vh] flex flex-col justify-between relative overflow-hidden">
+  <div class="max-w-4xl mx-auto w-full flex-grow flex flex-col justify-between">
     
-    <!-- HEADER NAV (Menampil nama & audio control jika sudah login) -->
-    <header id="app-header" class="hidden mb-4 bg-white/80 backdrop-blur-md rounded-2xl p-3 border-4 border-yellow-300 shadow-md flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-3xl">🐾</span>
+    <!-- HEADER NAV -->
+    <header id="app-header" class="hidden mb-6 glass-card p-3 sm:p-4 flex items-center justify-between border-slate-100">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
+          🐾
+        </div>
         <div>
-          <h1 class="font-bold text-xl text-yellow-600 leading-none">GACLOAN</h1>
-          <p class="text-xs text-slate-500 font-semibold">Games Ceria Logika Anak</p>
+          <h1 class="font-extrabold text-xl text-slate-800 leading-none tracking-wide">GACLOAN</h1>
+          <p class="text-[10px] sm:text-xs text-slate-400 font-bold uppercase tracking-wider">Games Ceria Logika Anak</p>
         </div>
       </div>
 
       <div class="flex items-center gap-2 sm:gap-3">
-        <div class="bg-yellow-100 border-2 border-yellow-400 rounded-full px-3 py-1 flex items-center gap-1">
-          <span class="text-lg">👧🏻</span>
-          <span id="header-user-name" class="font-extrabold text-yellow-800 text-sm">Teman</span>
+        <div class="bg-amber-50 border border-amber-200/60 rounded-full px-3 py-1.5 flex items-center gap-2 shadow-sm">
+          <span class="text-base">👧🏻</span>
+          <span id="header-user-name" class="font-extrabold text-amber-900 text-xs sm:text-sm">Teman</span>
         </div>
-        <button id="audio-toggle" onclick="toggleAudio()" class="btn-3d btn-3d-yellow text-sm p-2 rounded-full flex items-center justify-center">
+        <button id="audio-toggle" onclick="toggleAudio()" class="btn-3d btn-3d-amber w-9 h-9 sm:w-10 sm:h-10 rounded-2xl flex items-center justify-center text-sm">
           🔊
         </button>
-        <button onclick="logout()" class="btn-3d btn-3d-red text-xs px-3 py-2 rounded-xl font-bold">
+        <button onclick="logout()" class="btn-3d btn-3d-rose text-xs px-3.5 py-2 rounded-2xl font-bold">
           Keluar
         </button>
       </div>
     </header>
 
     <!-- CONTENT AREA -->
-    <main class="flex-grow flex items-center justify-center py-2">
+    <main class="flex-grow flex items-center justify-center my-auto">
       
       <!-- ================= 1. PAGE LOGIN ================= -->
       <section id="page-login" class="w-full max-w-md text-center">
-        <div class="game-card p-6 sm:p-8 border-yellow-300 bg-white relative">
-          <div class="text-6xl mb-3 animate-bounce-gentle">🐮</div>
-          <h1 class="text-3xl font-extrabold text-yellow-500 mb-1 tracking-wide">GACLOAN</h1>
-          <p class="text-sm font-bold text-slate-500 mb-6">Games Ceria Logika Anak (Usia 5-6 Tahun)<br><span class="text-xs text-emerald-600">Subtema: Binatang Berkaki 4</span></p>
+        <div class="glass-card p-7 sm:p-10 relative overflow-hidden">
+          <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-200/50 rounded-full blur-2xl"></div>
+          <div class="absolute -bottom-12 -left-12 w-32 h-32 bg-emerald-200/50 rounded-full blur-2xl"></div>
 
-          <form onsubmit="handleLogin(event)" class="space-y-4">
+          <div class="text-7xl mb-4 animate-float inline-block">🐮</div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight mb-1">GACLOAN</h1>
+          <p class="text-xs sm:text-sm font-semibold text-slate-500 mb-8">
+            Games Ceria Logika Anak (Usia 5-6 Tahun)<br>
+            <span class="text-emerald-600 font-bold">Subtema: Binatang Berkaki 4</span>
+          </p>
+
+          <form onsubmit="handleLogin(event)" class="space-y-5">
             <div class="text-left">
-              <label class="block text-sm font-bold text-slate-600 mb-1 ml-1">Siapa Namamu?</label>
-              <input type="text" id="input-nama" required placeholder="Tulis namamu di sini..." class="w-full text-center text-lg font-bold p-3 border-4 border-yellow-200 rounded-2xl focus:outline-none focus:border-yellow-400 bg-yellow-50 placeholder-slate-400">
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1">Nama Lengkap Siswa</label>
+              <input type="text" id="input-nama" required placeholder="Tulis namamu di sini..." class="w-full text-center text-base sm:text-lg font-bold p-4 border-2 border-slate-200 rounded-2xl focus:outline-none focus:border-amber-400 bg-slate-50/50 transition">
             </div>
 
-            <button type="submit" class="btn-3d btn-3d-green w-full text-xl font-black py-4 rounded-2xl tracking-wider">
+            <button type="submit" class="btn-3d btn-3d-emerald w-full text-lg font-extrabold py-4 rounded-2xl tracking-wide">
               MULAI MAIN 🚀
             </button>
           </form>
@@ -142,46 +150,46 @@
       </section>
 
       <!-- ================= 2. PAGE MENU UTAMA ================= -->
-      <section id="page-menu" class="hidden w-full">
-        <div class="text-center mb-6">
-          <h2 class="text-2xl sm:text-3xl font-black text-slate-700">Pilih Menu Belajar & Main</h2>
-          <p class="text-xs sm:text-sm text-slate-500 font-bold">Tekan salah satu tombol di bawah ini ya!</p>
+      <section id="page-menu" class="hidden w-full max-w-3xl">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">Pilih Menu Belajar & Main</h2>
+          <p class="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Pilih petualangan serumu hari ini!</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <!-- Card 1: Tujuan -->
-          <button onclick="navigateTo('page-tujuan')" class="btn-3d btn-3d-blue game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
-            <div class="text-4xl bg-blue-100 p-3 rounded-2xl">🎯</div>
+          <button onclick="navigateTo('page-tujuan')" class="btn-3d btn-3d-indigo glass-card p-6 text-left flex items-center gap-5 hover:scale-[1.02] transition">
+            <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-3xl shadow-inner">🎯</div>
             <div>
-              <h3 class="text-lg font-black">Tujuan Pembelajaran</h3>
-              <p class="text-xs opacity-80 font-bold">Apa yang akan kita pelajari?</p>
+              <h3 class="text-lg font-extrabold">Tujuan Pembelajaran</h3>
+              <p class="text-xs opacity-90 font-medium">Target belajar kita</p>
             </div>
           </button>
 
           <!-- Card 2: Materi -->
-          <button onclick="navigateTo('page-materi')" class="btn-3d btn-3d-green game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
-            <div class="text-4xl bg-emerald-100 p-3 rounded-2xl">📖</div>
+          <button onclick="navigateTo('page-materi')" class="btn-3d btn-3d-emerald glass-card p-6 text-left flex items-center gap-5 hover:scale-[1.02] transition">
+            <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-3xl shadow-inner">📖</div>
             <div>
-              <h3 class="text-lg font-black">Materi Pembelajaran</h3>
-              <p class="text-xs opacity-80 font-bold">Kenal Hewan Berkaki 4</p>
+              <h3 class="text-lg font-extrabold">Materi Pembelajaran</h3>
+              <p class="text-xs opacity-90 font-medium">Kenali Hewan Berkaki 4</p>
             </div>
           </button>
 
           <!-- Card 3: Kuis -->
-          <button onclick="navigateTo('page-kuis')" class="btn-3d btn-3d-purple game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
-            <div class="text-4xl bg-purple-100 p-3 rounded-2xl">🏆</div>
+          <button onclick="navigateTo('page-kuis')" class="btn-3d btn-3d-rose glass-card p-6 text-left flex items-center gap-5 hover:scale-[1.02] transition">
+            <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-3xl shadow-inner">🏆</div>
             <div>
-              <h3 class="text-lg font-black">Kuis Interaktif</h3>
-              <p class="text-xs opacity-80 font-bold">Uji Pengetahuanmu!</p>
+              <h3 class="text-lg font-extrabold">Kuis Interaktif</h3>
+              <p class="text-xs opacity-90 font-medium">Uji kemampuanmu</p>
             </div>
           </button>
 
           <!-- Card 4: Games 4 Pilar -->
-          <button onclick="navigateTo('page-games-menu')" class="btn-3d btn-3d-yellow game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
-            <div class="text-4xl bg-yellow-100 p-3 rounded-2xl">🎮</div>
+          <button onclick="navigateTo('page-games-menu')" class="btn-3d btn-3d-amber glass-card p-6 text-left flex items-center gap-5 hover:scale-[1.02] transition">
+            <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-3xl shadow-inner">🎮</div>
             <div>
-              <h3 class="text-lg font-black">Games Logika</h3>
-              <p class="text-xs opacity-80 font-bold">Dekomposisi & Pola Gambar</p>
+              <h3 class="text-lg font-extrabold">Games Logika</h3>
+              <p class="text-xs opacity-90 font-medium">Dekomposisi & Pola</p>
             </div>
           </button>
         </div>
@@ -189,33 +197,33 @@
 
       <!-- ================= 3. PAGE TUJUAN PEMBELAJARAN ================= -->
       <section id="page-tujuan" class="hidden w-full max-w-2xl">
-        <div class="game-card p-6 bg-white border-blue-300">
-          <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-100 pb-3">
+        <div class="glass-card p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-6 border-b border-slate-100 pb-4">
             <span class="text-3xl">🎯</span>
-            <h2 class="text-2xl font-black text-blue-600">Tujuan Pembelajaran</h2>
+            <h2 class="text-2xl font-extrabold text-indigo-600">Tujuan Pembelajaran</h2>
           </div>
 
-          <div class="space-y-3 font-bold text-slate-700 text-sm sm:text-base">
-            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+          <div class="space-y-3 font-semibold text-slate-700 text-sm sm:text-base">
+            <div class="p-4 bg-indigo-50/60 rounded-2xl flex items-center gap-3 border border-indigo-100">
               <span class="text-xl">1️⃣</span>
-              <span>Anak dapat mengenali jenis-jenis binatang berkaki empat.</span>
+              <span>Mengenal jenis-jenis binatang berkaki empat.</span>
             </div>
-            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+            <div class="p-4 bg-indigo-50/60 rounded-2xl flex items-center gap-3 border border-indigo-100">
               <span class="text-xl">2️⃣</span>
-              <span>Anak tahu tempat tinggal (habitat) binatang berkaki empat.</span>
+              <span>Memahami tempat tinggal (habitat) binatang berkaki empat.</span>
             </div>
-            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+            <div class="p-4 bg-indigo-50/60 rounded-2xl flex items-center gap-3 border border-indigo-100">
               <span class="text-xl">3️⃣</span>
-              <span>Anak paham manfaat binatang berkaki empat bagi manusia.</span>
+              <span>Mengetahui manfaat binatang berkaki empat bagi manusia.</span>
             </div>
-            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+            <div class="p-4 bg-indigo-50/60 rounded-2xl flex items-center gap-3 border border-indigo-100">
               <span class="text-xl">4️⃣</span>
-              <span>Anak mampu melatih kemampuan berpikir komputasional (Dekomposisi & Pengenalan Pola).</span>
+              <span>Melatih logika berpikir komputasional (Dekomposisi & Pola).</span>
             </div>
           </div>
 
-          <div class="mt-6 text-center">
-            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray px-6 py-3 rounded-xl font-bold">
+          <div class="mt-8 text-center">
+            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-slate px-6 py-3 rounded-2xl font-bold text-sm">
               ⬅ Kembali ke Menu
             </button>
           </div>
@@ -224,73 +232,75 @@
 
       <!-- ================= 4. PAGE MATERI PEMBELAJARAN ================= -->
       <section id="page-materi" class="hidden w-full max-w-3xl">
-        <div class="game-card p-4 sm:p-6 bg-white border-emerald-300">
-          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-3">
-            <div class="flex items-center gap-2">
+        <div class="glass-card p-5 sm:p-8">
+          <div class="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+            <div class="flex items-center gap-3">
               <span class="text-3xl">📖</span>
-              <h2 class="text-2xl font-black text-emerald-600">Materi Binatang Berkaki 4</h2>
+              <h2 class="text-2xl font-extrabold text-emerald-600">Materi Pembelajaran</h2>
             </div>
-            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray text-xs px-3 py-2 rounded-xl font-bold">
+            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-slate text-xs px-3.5 py-2 rounded-2xl font-bold">
               ⬅ Menu Utama
             </button>
           </div>
 
           <!-- Pilihan Hewan Tabs -->
-          <div class="grid grid-cols-4 gap-2 mb-4" id="materi-animal-tabs">
-            <button onclick="showMateriDetail('sapi')" id="tab-sapi" class="btn-3d btn-3d-green p-2 rounded-xl text-center text-xs font-black">
-              <span class="text-2xl block">🐮</span> Sapi
+          <div class="grid grid-cols-4 gap-2 mb-6" id="materi-animal-tabs">
+            <button onclick="showMateriDetail('sapi')" class="btn-3d btn-3d-emerald p-3 rounded-2xl text-center text-xs font-extrabold">
+              <span class="text-2xl block mb-1">🐮</span> Sapi
             </button>
-            <button onclick="showMateriDetail('kambing')" id="tab-kambing" class="btn-3d btn-3d-yellow p-2 rounded-xl text-center text-xs font-black">
-              <span class="text-2xl block">🐐</span> Kambing
+            <button onclick="showMateriDetail('kambing')" class="btn-3d btn-3d-amber p-3 rounded-2xl text-center text-xs font-extrabold">
+              <span class="text-2xl block mb-1">🐐</span> Kambing
             </button>
-            <button onclick="showMateriDetail('kucing')" id="tab-kucing" class="btn-3d btn-3d-blue p-2 rounded-xl text-center text-xs font-black">
-              <span class="text-2xl block">🐱</span> Kucing
+            <button onclick="showMateriDetail('kucing')" class="btn-3d btn-3d-indigo p-3 rounded-2xl text-center text-xs font-extrabold">
+              <span class="text-2xl block mb-1">🐱</span> Kucing
             </button>
-            <button onclick="showMateriDetail('kuda')" id="tab-kuda" class="btn-3d btn-3d-purple p-2 rounded-xl text-center text-xs font-black">
-              <span class="text-2xl block">🐴</span> Kuda
+            <button onclick="showMateriDetail('kuda')" class="btn-3d btn-3d-rose p-3 rounded-2xl text-center text-xs font-extrabold">
+              <span class="text-2xl block mb-1">🐴</span> Kuda
             </button>
           </div>
 
-          <!-- Detail Materi Card Container -->
-          <div id="materi-content" class="bg-slate-50 p-4 rounded-2xl border-2 border-slate-200">
-            <!-- Isi materi diinject via JS -->
+          <!-- Detail Materi Container -->
+          <div id="materi-content" class="bg-slate-50/70 p-5 rounded-3xl border border-slate-200/80">
+            <!-- Inject via JS -->
           </div>
         </div>
       </section>
 
       <!-- ================= 5. PAGE KUIS INTERAKTIF ================= -->
       <section id="page-kuis" class="hidden w-full max-w-2xl">
-        <div class="game-card p-6 bg-white border-purple-300">
-          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-3">
-            <div class="flex items-center gap-2">
+        <div class="glass-card p-6 sm:p-8">
+          <div class="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+            <div class="flex items-center gap-3">
               <span class="text-3xl">🏆</span>
-              <h2 class="text-xl font-black text-purple-600">Kuis Pintar</h2>
+              <h2 class="text-xl font-extrabold text-rose-600">Kuis Pintar</h2>
             </div>
-            <span id="kuis-progress" class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs">Soal 1 / 5</span>
+            <span id="kuis-progress" class="bg-rose-100 text-rose-800 font-extrabold px-3.5 py-1 rounded-full text-xs">Soal 1 / 5</span>
           </div>
 
           <div id="kuis-body">
-            <h3 id="kuis-pertanyaan" class="text-lg font-black text-center text-slate-700 mb-6">Pertanyaan Kuis</h3>
+            <h3 id="kuis-pertanyaan" class="text-lg font-extrabold text-center text-slate-800 mb-8">Pertanyaan Kuis</h3>
             
             <div id="kuis-opsi" class="grid grid-cols-2 gap-4 mb-6">
-              <!-- Opsi Jawaban Gambar/Teks diinject via JS -->
+              <!-- Opsi Jawaban diinject via JS -->
             </div>
           </div>
 
           <div id="kuis-selesai" class="hidden text-center py-6">
-            <div class="text-6xl mb-2">🎉</div>
-            <h3 class="text-2xl font-black text-purple-600 mb-2">Hebat Sekali!</h3>
-            <p class="font-bold text-slate-600 mb-4">Kamu telah menyelesaikan Kuis Binatang Berkaki 4!</p>
-            <button onclick="startKuis()" class="btn-3d btn-3d-purple px-6 py-3 rounded-xl font-bold text-sm mr-2">
-              🔄 Main Lagi
-            </button>
-            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray px-6 py-3 rounded-xl font-bold text-xs">
-              ⬅ Menu Utama
-            </button>
+            <div class="text-7xl mb-3 animate-bounce">🎉</div>
+            <h3 class="text-2xl font-extrabold text-rose-600 mb-1">Luar Biasa!</h3>
+            <p class="font-bold text-slate-500 mb-6">Kamu telah menyelesaikan Kuis Binatang Berkaki 4!</p>
+            <div class="flex justify-center gap-3">
+              <button onclick="startKuis()" class="btn-3d btn-3d-rose px-6 py-3 rounded-2xl font-extrabold text-sm">
+                🔄 Main Lagi
+              </button>
+              <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-slate px-6 py-3 rounded-2xl font-extrabold text-sm">
+                ⬅ Menu Utama
+              </button>
+            </div>
           </div>
 
-          <div class="mt-4 pt-3 border-t border-slate-100 flex justify-between items-center">
-            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray text-xs px-4 py-2 rounded-xl font-bold">
+          <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-slate text-xs px-4 py-2 rounded-2xl font-bold">
               ⬅ Menu Utama
             </button>
           </div>
@@ -299,39 +309,39 @@
 
       <!-- ================= 6. PAGE MENU GAMES 4 PILAR ================= -->
       <section id="page-games-menu" class="hidden w-full max-w-2xl">
-        <div class="text-center mb-6">
-          <h2 class="text-2xl font-black text-slate-700">Pilih Permainan Logika</h2>
-          <p class="text-xs text-slate-500 font-bold">Asah kemampuan Berpikir Komputasionalmu!</p>
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-extrabold text-slate-800 tracking-tight">Pilih Permainan Logika</h2>
+          <p class="text-xs sm:text-sm text-slate-500 font-semibold mt-1">Asah kemampuan Berpikir Komputasionalmu!</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <!-- Game 1: Dekomposisi -->
-          <div class="game-card p-5 bg-white border-green-300 text-center flex flex-col justify-between">
+          <div class="glass-card p-6 text-center flex flex-col justify-between border-emerald-100">
             <div>
-              <div class="text-5xl mb-2">🧩</div>
-              <h3 class="text-lg font-black text-green-700">Game Dekomposisi</h3>
-              <p class="text-xs text-slate-500 font-bold mt-1 mb-4">Sebutkan & tempelkan bagian-bagian tubuh hewan!</p>
+              <div class="text-6xl mb-3">🧩</div>
+              <h3 class="text-lg font-extrabold text-emerald-600">Game Dekomposisi</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1 mb-6">Tebak & cocokkan bagian-bagian tubuh hewan!</p>
             </div>
-            <button onclick="showLevelSelect('dekomposisi')" class="btn-3d btn-3d-green w-full py-3 rounded-xl font-bold text-sm">
+            <button onclick="showLevelSelect('dekomposisi')" class="btn-3d btn-3d-emerald w-full py-3.5 rounded-2xl font-extrabold text-sm">
               PILIH GAME INI ➡
             </button>
           </div>
 
           <!-- Game 2: Pola Gambar -->
-          <div class="game-card p-5 bg-white border-yellow-300 text-center flex flex-col justify-between">
+          <div class="glass-card p-6 text-center flex flex-col justify-between border-amber-100">
             <div>
-              <div class="text-5xl mb-2">🔄</div>
-              <h3 class="text-lg font-black text-yellow-700">Game Pola Gambar</h3>
-              <p class="text-xs text-slate-500 font-bold mt-1 mb-4">Lanjutkan urutan pola gambar kepala hewan!</p>
+              <div class="text-6xl mb-3">🔄</div>
+              <h3 class="text-lg font-extrabold text-amber-600">Game Pola Gambar</h3>
+              <p class="text-xs text-slate-500 font-medium mt-1 mb-6">Lanjutkan urutan pola kepala hewan!</p>
             </div>
-            <button onclick="showLevelSelect('pola')" class="btn-3d btn-3d-yellow w-full py-3 rounded-xl font-bold text-sm">
+            <button onclick="showLevelSelect('pola')" class="btn-3d btn-3d-amber w-full py-3.5 rounded-2xl font-extrabold text-sm">
               PILIH GAME INI ➡
             </button>
           </div>
         </div>
 
-        <div class="mt-6 text-center">
-          <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray px-6 py-2 rounded-xl font-bold text-xs">
+        <div class="mt-8 text-center">
+          <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-slate px-6 py-2.5 rounded-2xl font-bold text-xs">
             ⬅ Kembali ke Menu
           </button>
         </div>
@@ -339,40 +349,40 @@
 
       <!-- ================= 7. PAGE PILIH LEVEL GAME ================= -->
       <section id="page-level-select" class="hidden w-full max-w-md text-center">
-        <div class="game-card p-6 bg-white border-yellow-300">
-          <div class="text-4xl mb-2">⭐</div>
-          <h2 id="level-select-title" class="text-2xl font-black text-slate-700 mb-1">Pilih Level Game</h2>
-          <p class="text-xs font-bold text-slate-400 mb-6">Pilihlah tingkat kesulitan yang kamu mau:</p>
+        <div class="glass-card p-7 sm:p-9">
+          <div class="text-5xl mb-2">⭐</div>
+          <h2 id="level-select-title" class="text-2xl font-extrabold text-slate-800 mb-1">Pilih Level Game</h2>
+          <p class="text-xs font-semibold text-slate-400 mb-6">Tentukan tingkat kesulitannya:</p>
 
-          <div class="space-y-4">
-            <button onclick="launchGame('mudah')" class="btn-3d btn-3d-green w-full p-4 rounded-2xl text-left flex items-center justify-between">
+          <div class="space-y-3.5">
+            <button onclick="launchGame('mudah')" class="btn-3d btn-3d-emerald w-full p-4 rounded-2xl text-left flex items-center justify-between">
               <div>
-                <span class="font-black text-lg block">Level Mudah 🌱</span>
-                <span id="level-desc-mudah" class="text-xs font-bold opacity-80">2 Bagian / Pola 2 Gambar</span>
+                <span class="font-extrabold text-base block">Level Mudah 🌱</span>
+                <span id="level-desc-mudah" class="text-xs font-medium opacity-90">2 Bagian / Pola 2 Gambar</span>
               </div>
               <span class="text-2xl">🟢</span>
             </button>
 
-            <button onclick="launchGame('sedang')" class="btn-3d btn-3d-yellow w-full p-4 rounded-2xl text-left flex items-center justify-between">
+            <button onclick="launchGame('sedang')" class="btn-3d btn-3d-amber w-full p-4 rounded-2xl text-left flex items-center justify-between">
               <div>
-                <span class="font-black text-lg block">Level Sedang 🌿</span>
-                <span id="level-desc-sedang" class="text-xs font-bold opacity-80">3 Bagian / Pola 3 Gambar</span>
+                <span class="font-extrabold text-base block">Level Sedang 🌿</span>
+                <span id="level-desc-sedang" class="text-xs font-medium opacity-90">3 Bagian / Pola 3 Gambar</span>
               </div>
               <span class="text-2xl">🟡</span>
             </button>
 
-            <button onclick="launchGame('sulit')" class="btn-3d btn-3d-red w-full p-4 rounded-2xl text-left flex items-center justify-between">
+            <button onclick="launchGame('sulit')" class="btn-3d btn-3d-rose w-full p-4 rounded-2xl text-left flex items-center justify-between">
               <div>
-                <span class="font-black text-lg block">Level Sulit 🌳</span>
-                <span id="level-desc-sulit" class="text-xs font-bold opacity-80">Semua Bagian / Pola 4 Gambar</span>
+                <span class="font-extrabold text-base block">Level Sulit 🌳</span>
+                <span id="level-desc-sulit" class="text-xs font-medium opacity-90">Semua Bagian / Pola 4 Gambar</span>
               </div>
               <span class="text-2xl">🔴</span>
             </button>
           </div>
 
-          <div class="mt-6">
-            <button onclick="navigateTo('page-games-menu')" class="btn-3d btn-3d-gray px-6 py-2 rounded-xl font-bold text-xs">
-              ⬅ Kembalikan
+          <div class="mt-8">
+            <button onclick="navigateTo('page-games-menu')" class="btn-3d btn-3d-slate px-6 py-2.5 rounded-2xl font-bold text-xs">
+              ⬅ Kembali
             </button>
           </div>
         </div>
@@ -380,71 +390,62 @@
 
       <!-- ================= 8. GAME DEKOMPOSISI PLAY AREA ================= -->
       <section id="page-game-dekomposisi" class="hidden w-full max-w-3xl">
-        <div class="game-card p-4 sm:p-6 bg-white border-green-300">
-          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
+        <div class="glass-card p-5 sm:p-7">
+          <div class="flex items-center justify-between mb-5 border-b border-slate-100 pb-3">
             <div>
-              <h3 class="font-black text-lg text-green-700">Game Dekomposisi</h3>
-              <p class="text-xs font-bold text-slate-400">Tarik atau Tekan Label Kata ke Kotak Tubuh Sapi!</p>
+              <h3 class="font-extrabold text-lg text-emerald-600">Game Dekomposisi</h3>
+              <p class="text-xs font-medium text-slate-400">Tarik atau Tekan Label Kata ke Kotak Tubuh Sapi!</p>
             </div>
-            <span id="dekomposisi-level-badge" class="bg-green-100 text-green-800 text-xs font-extrabold px-3 py-1 rounded-full">Level: Mudah</span>
+            <span id="dekomposisi-level-badge" class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3.5 py-1 rounded-full">Level: Mudah</span>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-            <!-- Gambar Hewan Interaktif / Target Area -->
-            <div class="md:col-span-2 bg-gradient-to-b from-sky-100 to-emerald-50 rounded-2xl p-4 border-2 border-slate-200 relative min-h-[280px] flex items-center justify-center">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
+            <!-- Gambar Hewan Interaktif -->
+            <div class="md:col-span-2 bg-gradient-to-b from-sky-50 to-emerald-50 rounded-3xl p-4 border border-slate-200/60 relative min-h-[290px] flex items-center justify-center">
               
-              <!-- Container Hewan Sapi SVG Custom -->
-              <div class="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
-                <!-- Sapi Illustration SVG -->
+              <div class="relative w-full max-w-[300px] aspect-square flex items-center justify-center">
+                <!-- Sapi SVG -->
                 <svg class="w-full h-full" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Badan -->
                   <ellipse cx="150" cy="180" rx="90" ry="65" fill="#FFFFFF" stroke="#334155" stroke-width="5"/>
                   <path d="M120 140 Q140 170 120 200 Q90 180 120 140Z" fill="#334155"/>
                   <path d="M180 150 Q210 180 190 220 Q160 190 180 150Z" fill="#334155"/>
-                  <!-- Kaki -->
                   <rect x="90" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
                   <rect x="125" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
                   <rect x="160" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
                   <rect x="195" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
-                  <!-- Kepala -->
                   <circle cx="90" cy="110" r="45" fill="#FFFFFF" stroke="#334155" stroke-width="5"/>
-                  <!-- Telinga -->
                   <ellipse cx="50" cy="85" rx="20" ry="10" fill="#F87171" stroke="#334155" stroke-width="4" transform="rotate(-20 50 85)"/>
                   <ellipse cx="130" cy="85" rx="20" ry="10" fill="#F87171" stroke="#334155" stroke-width="4" transform="rotate(20 130 85)"/>
-                  <!-- Mata -->
                   <circle cx="75" cy="100" r="6" fill="#334155"/>
                   <circle cx="105" cy="100" r="6" fill="#334155"/>
-                  <!-- Mulut/Hidung -->
                   <ellipse cx="90" cy="125" rx="22" ry="14" fill="#FBCFE8" stroke="#334155" stroke-width="3"/>
                   <circle cx="83" cy="125" r="3" fill="#334155"/>
                   <circle cx="97" cy="125" r="3" fill="#334155"/>
-                  <!-- Ekor -->
                   <path d="M235 170 Q260 190 250 220" stroke="#334155" stroke-width="5" fill="none"/>
                   <circle cx="250" cy="220" r="8" fill="#334155"/>
                 </svg>
 
-                <!-- Drop Target Zones Overlaid -->
                 <div id="drop-targets-container" class="absolute inset-0 pointer-events-none">
-                  <!-- Drop zones diinject via JS sesuai Level -->
+                  <!-- Drop zones diinject via JS -->
                 </div>
               </div>
             </div>
 
-            <!-- Area Pilihan Kata/Label -->
+            <!-- Area Pilihan Kata -->
             <div class="flex flex-col justify-center">
-              <h4 class="font-bold text-xs text-slate-500 mb-2 text-center">Pilihan Label Kata:</h4>
-              <div id="dekomposisi-labels" class="flex flex-wrap md:flex-col gap-2 justify-center">
-                <!-- Label Draggable diinject via JS -->
+              <h4 class="font-extrabold text-xs text-slate-400 mb-3 text-center uppercase tracking-wider">Label Bagian Tubuh</h4>
+              <div id="dekomposisi-labels" class="flex flex-wrap md:flex-col gap-2.5 justify-center">
+                <!-- Label diinject via JS -->
               </div>
             </div>
           </div>
 
-          <div class="mt-6 flex justify-between items-center border-t pt-3">
-            <button onclick="showLevelSelect('dekomposisi')" class="btn-3d btn-3d-gray text-xs px-4 py-2 rounded-xl font-bold">
+          <div class="mt-6 flex justify-between items-center border-t border-slate-100 pt-4">
+            <button onclick="showLevelSelect('dekomposisi')" class="btn-3d btn-3d-slate text-xs px-4 py-2.5 rounded-2xl font-bold">
               ⬅ Ganti Level
             </button>
-            <button onclick="resetDekomposisi()" class="btn-3d btn-3d-yellow text-xs px-4 py-2 rounded-xl font-bold">
-              🔄 Reset Game
+            <button onclick="resetDekomposisi()" class="btn-3d btn-3d-amber text-xs px-4 py-2.5 rounded-2xl font-bold">
+              🔄 Reset
             </button>
           </div>
         </div>
@@ -452,37 +453,35 @@
 
       <!-- ================= 9. GAME POLA GAMBAR PLAY AREA ================= -->
       <section id="page-game-pola" class="hidden w-full max-w-2xl">
-        <div class="game-card p-6 bg-white border-yellow-300">
-          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
+        <div class="glass-card p-6 sm:p-8">
+          <div class="flex items-center justify-between mb-6 border-b border-slate-100 pb-3">
             <div>
-              <h3 class="font-black text-lg text-yellow-700">Game Pola Gambar</h3>
-              <p class="text-xs font-bold text-slate-400">Pilihlah Kepala Hewan Berikutnya!</p>
+              <h3 class="font-extrabold text-lg text-amber-600">Game Pola Gambar</h3>
+              <p class="text-xs font-medium text-slate-400">Pilihlah Kepala Hewan Berikutnya!</p>
             </div>
-            <span id="pola-level-badge" class="bg-yellow-100 text-yellow-800 text-xs font-extrabold px-3 py-1 rounded-full">Level: Mudah</span>
+            <span id="pola-level-badge" class="bg-amber-100 text-amber-800 text-xs font-extrabold px-3.5 py-1 rounded-full">Level: Mudah</span>
           </div>
 
-          <!-- Deretan Pola Card -->
           <div class="mb-8">
-            <h4 class="text-center font-bold text-xs text-slate-500 mb-3">Lanjutkan Urutan Pola di Bawah Ini:</h4>
-            <div id="pola-sequence-container" class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap min-h-[100px] p-4 bg-yellow-50 rounded-2xl border-2 border-yellow-200">
+            <h4 class="text-center font-bold text-xs text-slate-400 mb-3 uppercase tracking-wider">Lanjutkan Urutan Pola Ini</h4>
+            <div id="pola-sequence-container" class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap min-h-[110px] p-5 bg-amber-50/50 rounded-3xl border border-amber-200/60">
               <!-- Kartu Pola Gambar diinject via JS -->
             </div>
           </div>
 
-          <!-- Pilihan Jawaban Cards -->
           <div>
-            <h4 class="text-center font-bold text-xs text-slate-500 mb-3">Klik Kepala Hewan Yang Tepat:</h4>
+            <h4 class="text-center font-bold text-xs text-slate-400 mb-3 uppercase tracking-wider">Tekan Kepala Hewan Yang Tepat</h4>
             <div id="pola-options-container" class="flex items-center justify-center gap-4">
-              <!-- Opsi Jawaban Kepala Hewan diinject via JS -->
+              <!-- Opsi Jawaban diinject via JS -->
             </div>
           </div>
 
-          <div class="mt-8 flex justify-between items-center border-t pt-3">
-            <button onclick="showLevelSelect('pola')" class="btn-3d btn-3d-gray text-xs px-4 py-2 rounded-xl font-bold">
+          <div class="mt-8 flex justify-between items-center border-t border-slate-100 pt-4">
+            <button onclick="showLevelSelect('pola')" class="btn-3d btn-3d-slate text-xs px-4 py-2.5 rounded-2xl font-bold">
               ⬅ Ganti Level
             </button>
             <div class="text-xs font-extrabold text-slate-500">
-              Skor: <span id="pola-score" class="text-yellow-600">0</span>
+              Skor: <span id="pola-score" class="text-amber-600 text-sm">0</span>
             </div>
           </div>
         </div>
@@ -491,22 +490,19 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="text-center py-2 text-xs font-bold text-slate-400">
-      GACLOAN &copy; 2026 - Pembelajaran Anak Usia Dini
+    <footer class="text-center py-3 text-xs font-bold text-slate-400">
+      GACLOAN &copy; Pembelajaran Anak Usia Dini
     </footer>
 
   </div>
 
-  <!-- SCRIPT LOGIC MAIN PROGRAM -->
   <script>
-    // Global State
     let currentUser = "";
     let isAudioOn = true;
     let currentSelectedGame = "";
     let currentLevel = "mudah";
     let selectedLabelForMobile = null;
 
-    // Web Audio Synthesizer untuk SFX
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     
     function playSound(type) {
@@ -518,19 +514,19 @@
         gain.connect(audioCtx.destination);
 
         if (type === 'click') {
-          osc.frequency.setValueAtTime(400, audioCtx.currentTime);
-          gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+          osc.frequency.setValueAtTime(450, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
           osc.start();
           osc.stop(audioCtx.currentTime + 0.05);
         } else if (type === 'correct') {
-          osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
-          osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
-          gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+          osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+          osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1);
+          gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
           osc.start();
           osc.stop(audioCtx.currentTime + 0.25);
         } else if (type === 'wrong') {
-          osc.frequency.setValueAtTime(200, audioCtx.currentTime);
-          gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+          osc.frequency.setValueAtTime(180, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
           osc.start();
           osc.stop(audioCtx.currentTime + 0.2);
         }
@@ -543,7 +539,6 @@
       btn.innerText = isAudioOn ? '🔊' : '🔇';
     }
 
-    // Navigation System
     function navigateTo(pageId) {
       playSound('click');
       const pages = ['page-login', 'page-menu', 'page-tujuan', 'page-materi', 'page-kuis', 'page-games-menu', 'page-level-select', 'page-game-dekomposisi', 'page-game-pola'];
@@ -561,7 +556,6 @@
       }
     }
 
-    // Login logic
     function handleLogin(e) {
       e.preventDefault();
       const namaInput = document.getElementById('input-nama').value.trim();
@@ -581,38 +575,37 @@
       navigateTo('page-login');
     }
 
-    // ================= MATERI DATA & LOGIC =================
     const dataMateri = {
       sapi: {
         nama: "Sapi",
         emoji: "🐮",
-        deskripsi: "Sapi adalah binatang berkaki 4 yang berbadan besar. Sapi suka makan rumput dan menghasilkan susu segar untuk kita!",
+        deskripsi: "Sapi adalah binatang berkaki 4 berbadan besar. Sapi suka makan rumput dan menghasilkan susu segar!",
         habitat: "🏡 Kandang & Padang Rumput",
-        manfaat: "🥛 Menghasilkan Susu & 🥩 Daging Lezat",
+        manfaat: "🥛 Susu Segar & 🥩 Daging",
         suara: "Moo~ Moo~"
       },
       kambing: {
         nama: "Kambing",
         emoji: "🐐",
-        deskripsi: "Kambing adalah binatang berkaki 4 yang memiliki tanduk. Kambing sangat suka makan dedaunan dan rumput.",
+        deskripsi: "Kambing adalah binatang berkaki 4 bertanduk. Sangat suka makan dedaunan dan rumput hijau.",
         habitat: "🏡 Kandang & Perbukitan",
-        manfaat: "🥩 Daging, 🥛 Susu Kambing, & 🧶 Bulu",
+        manfaat: "🥩 Daging & 🥛 Susu Kambing",
         suara: "Mbee~ Mbee~"
       },
       kucing: {
         nama: "Kucing",
         emoji: "🐱",
-        deskripsi: "Kucing adalah binatang berkaki 4 yang lucu dan lembut. Kucing adalah hewan peliharaan kesayangan di rumah.",
-        habitat: "🏠 Dalam Rumah / Peliharaan",
-        manfaat: "🐱 Teman Bermain & 🐭 Menjaga Rumah dari Tikus",
+        deskripsi: "Kucing adalah hewan peliharaan berkaki 4 yang lucu, berbulu lembut, dan ramah.",
+        habitat: "🏠 Dalam Rumah Peliharaan",
+        manfaat: "🐱 Teman Bermain Rumah",
         suara: "Meow~ Meow~"
       },
       kuda: {
         nama: "Kuda",
         emoji: "🐴",
-        deskripsi: "Kuda adalah binatang berkaki 4 yang berlari sangat cepat dan memiliki tubuh yang kuat.",
-        habitat: "🌾 Padang Rumput & Peternakan",
-        manfaat: "🛺 Menarik Delman & 🏇 Olahraga Berkuda",
+        deskripsi: "Kuda adalah binatang berkaki 4 yang berlari sangat cepat dan memiliki fisik yang kuat.",
+        habitat: "🌾 Padang Rumput Peternakan",
+        manfaat: "🛺 Menarik Delman",
         suara: "Ihiii~ Hihihi~"
       }
     };
@@ -624,40 +617,39 @@
       
       contentEl.innerHTML = `
         <div class="text-center mb-4">
-          <div class="text-7xl mb-1">${item.emoji}</div>
-          <h3 class="text-2xl font-black text-slate-800">${item.nama}</h3>
+          <div class="text-6xl mb-1">${item.emoji}</div>
+          <h3 class="text-2xl font-extrabold text-slate-800">${item.nama}</h3>
         </div>
 
-        <div class="space-y-3 font-bold text-sm">
-          <div class="bg-white p-3 rounded-xl border border-slate-200">
-            <span class="text-emerald-600 block text-xs font-black">A. APA ITUS HEWAN INI?</span>
-            <p class="text-slate-600 mt-1">${item.deskripsi}</p>
+        <div class="space-y-2.5 font-bold text-xs sm:text-sm">
+          <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <span class="text-emerald-600 block text-[10px] font-black tracking-wider uppercase">A. Apa Itu Hewan Ini?</span>
+            <p class="text-slate-600 mt-0.5">${item.deskripsi}</p>
           </div>
 
-          <div class="bg-white p-3 rounded-xl border border-slate-200">
-            <span class="text-emerald-600 block text-xs font-black">B. DIMANA TEMPAT TINGGALNYA?</span>
-            <p class="text-slate-600 mt-1">${item.habitat}</p>
+          <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <span class="text-emerald-600 block text-[10px] font-black tracking-wider uppercase">B. Tempat Tinggal</span>
+            <p class="text-slate-600 mt-0.5">${item.habitat}</p>
           </div>
 
-          <div class="bg-white p-3 rounded-xl border border-slate-200">
-            <span class="text-emerald-600 block text-xs font-black">C. APA MANFAATNYA?</span>
-            <p class="text-slate-600 mt-1">${item.manfaat}</p>
+          <div class="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-sm">
+            <span class="text-emerald-600 block text-[10px] font-black tracking-wider uppercase">C. Manfaat Bagi Manusia</span>
+            <p class="text-slate-600 mt-0.5">${item.manfaat}</p>
           </div>
 
-          <div class="bg-emerald-100 p-3 rounded-xl border border-emerald-300 text-center flex items-center justify-between">
+          <div class="bg-emerald-100/70 p-3.5 rounded-2xl border border-emerald-200 flex items-center justify-between">
             <div>
-              <span class="text-xs font-black text-emerald-800 block">SUARA HEWAN:</span>
-              <span class="text-base font-black text-emerald-900">${item.suara}</span>
+              <span class="text-[10px] font-black text-emerald-800 block uppercase tracking-wider">Suara Khas:</span>
+              <span class="text-sm font-extrabold text-emerald-900">${item.suara}</span>
             </div>
-            <button onclick="playSound('correct')" class="btn-3d btn-3d-green text-xs px-3 py-2 rounded-xl font-bold">
-              🔊 Dengar Suara
+            <button onclick="playSound('correct')" class="btn-3d btn-3d-emerald text-xs px-3.5 py-2 rounded-xl font-bold">
+              🔊 Bunyi
             </button>
           </div>
         </div>
       `;
     }
 
-    // ================= KUIS INTERAKTIF LOGIC =================
     const kuisData = [
       {
         pertanyaan: "Hewan manakah di bawah ini yang menghasilkan susu untuk kita minum?",
@@ -715,8 +707,8 @@
 
       q.opsi.forEach((item) => {
         const btn = document.createElement('button');
-        btn.className = "btn-3d btn-3d-purple p-4 rounded-2xl flex flex-col items-center justify-center gap-2 text-center";
-        btn.innerHTML = `<span class="text-5xl">${item.emoji}</span><span class="font-bold text-base">${item.teks}</span>`;
+        btn.className = "btn-3d btn-3d-rose p-5 rounded-2xl flex flex-col items-center justify-center gap-2 text-center";
+        btn.innerHTML = `<span class="text-5xl">${item.emoji}</span><span class="font-extrabold text-sm sm:text-base">${item.teks}</span>`;
         btn.onclick = () => checkKuisAnswer(item.benar);
         opsiContainer.appendChild(btn);
       });
@@ -739,7 +731,6 @@
       }
     }
 
-    // ================= GAMES LEVEL SELECTION LOGIC =================
     function showLevelSelect(gameType) {
       playSound('click');
       currentSelectedGame = gameType;
@@ -758,7 +749,7 @@
         titleEl.innerText = "Level Game Pola Gambar";
         descM.innerText = "Pola 2 Gambar (A-B)";
         descS.innerText = "Pola 3 Gambar (A-B-C)";
-        descH.innerText = "Pola 4 Gambar / Variasi";
+        descH.innerText = "Pola Variasi Kompleks";
       }
 
       navigateTo('page-level-select');
@@ -777,7 +768,6 @@
       }
     }
 
-    // ================= GAME DEKOMPOSISI LOGIC =================
     const dekomposisiParts = [
       { id: 'kepala', label: 'Kepala', top: '25%', left: '20%' },
       { id: 'kaki', label: 'Kaki', top: '75%', left: '45%' },
@@ -811,31 +801,27 @@
       targetsContainer.innerHTML = "";
       labelsContainer.innerHTML = "";
 
-      // Render Drop Targets over the SVG Image
       activeParts.forEach(part => {
         const target = document.createElement('div');
-        target.className = "drop-zone pointer-events-auto absolute transform -translate-x-1/2 -translate-y-1/2 px-2 py-1 rounded-xl text-xs font-black shadow-sm flex items-center justify-center min-w-[60px] min-h-[32px]";
+        target.className = "drop-zone pointer-events-auto absolute transform -translate-x-1/2 -translate-y-1/2 px-2.5 py-1 rounded-2xl text-xs font-extrabold shadow-sm flex items-center justify-center min-w-[65px] min-h-[34px]";
         target.style.top = part.top;
         target.style.left = part.left;
         target.dataset.partId = part.id;
         target.innerText = "???";
 
-        // Drag events
         target.ondragover = (e) => { e.preventDefault(); target.classList.add('hovered'); };
         target.ondragleave = () => target.classList.remove('hovered');
         target.ondrop = (e) => handleDrop(e, part.id);
 
-        // Mobile tap selection
         target.onclick = () => handleTargetTap(part.id, target);
 
         targetsContainer.appendChild(target);
       });
 
-      // Render Draggable Labels
       const shuffled = [...activeParts].sort(() => Math.random() - 0.5);
       shuffled.forEach(part => {
         const labelBtn = document.createElement('div');
-        labelBtn.className = "btn-3d btn-3d-green p-2 rounded-xl text-center text-xs font-black cursor-grab active:cursor-grabbing select-none";
+        labelBtn.className = "btn-3d btn-3d-emerald p-2.5 rounded-2xl text-center text-xs font-extrabold cursor-grab active:cursor-grabbing select-none";
         labelBtn.innerText = part.label;
         labelBtn.draggable = true;
         labelBtn.id = `label-${part.id}`;
@@ -846,10 +832,9 @@
 
         labelBtn.onclick = () => {
           playSound('click');
-          // Deselect previous
-          document.querySelectorAll('#dekomposisi-labels div').forEach(el => el.classList.remove('ring-4', 'ring-yellow-400'));
+          document.querySelectorAll('#dekomposisi-labels div').forEach(el => el.classList.remove('ring-4', 'ring-amber-300'));
           selectedLabelForMobile = part.id;
-          labelBtn.classList.add('ring-4', 'ring-yellow-400');
+          labelBtn.classList.add('ring-4', 'ring-amber-300');
         };
 
         labelsContainer.appendChild(labelBtn);
@@ -882,7 +867,6 @@
         const labelEl = document.getElementById(`label-${partId}`);
         if (labelEl) labelEl.style.display = 'none';
 
-        // Check Win
         checkDekomposisiWin();
       } else {
         playSound('wrong');
@@ -894,12 +878,11 @@
       if (filledZones.length === activeParts.length) {
         setTimeout(() => {
           playSound('correct');
-          alert("🎉 HORE! Kamu berhasil menyebutkan semua bagian tubuh Sapi!");
+          alert("🎉 HORE! Kamu berhasil melengkapi bagian tubuh Sapi!");
         }, 300);
       }
     }
 
-    // ================= GAME POLA GAMBAR LOGIC =================
     const animalHeads = [
       { id: 'sapi', emoji: '🐮', nama: 'Sapi' },
       { id: 'kucing', emoji: '🐱', nama: 'Kucing' },
@@ -925,20 +908,17 @@
       let answer = null;
 
       if (currentLevel === 'mudah') {
-        // Pola A-B-A-B (2 gambar berulang)
         const h1 = animalHeads[0];
         const h2 = animalHeads[1];
         sequence = [h1, h2, h1, h2, h1];
         answer = h2;
       } else if (currentLevel === 'sedang') {
-        // Pola A-B-C-A-B-C (3 gambar berulang)
         const h1 = animalHeads[0];
         const h2 = animalHeads[1];
         const h3 = animalHeads[2];
         sequence = [h1, h2, h3, h1, h2];
         answer = h3;
       } else {
-        // Pola A-A-B-B (4 gambar / Variasi)
         const h1 = animalHeads[0];
         const h2 = animalHeads[2];
         sequence = [h1, h1, h2, h2, h1];
@@ -947,25 +927,22 @@
 
       currentPolaTarget = answer.id;
 
-      // Render Sequence Cards
       sequence.forEach(item => {
         const card = document.createElement('div');
-        card.className = "game-card p-3 sm:p-4 text-3xl sm:text-4xl bg-white border-2 border-yellow-300 flex items-center justify-center animate-bounce-gentle";
+        card.className = "glass-card p-3 sm:p-4 text-3xl sm:text-4xl border-2 border-amber-200/80 flex items-center justify-center shadow-sm animate-float";
         card.innerText = item.emoji;
         seqContainer.appendChild(card);
       });
 
-      // Card Tanda Tanya (Kotak Kosong)
       const emptyCard = document.createElement('div');
-      emptyCard.className = "game-card p-3 sm:p-4 text-3xl sm:text-4xl bg-yellow-200 border-4 border-dashed border-yellow-500 flex items-center justify-center font-black text-yellow-700 animate-pulse";
+      emptyCard.className = "glass-card p-3 sm:p-4 text-3xl sm:text-4xl bg-amber-100/80 border-2 border-dashed border-amber-400 flex items-center justify-center font-extrabold text-amber-700 animate-pulse";
       emptyCard.innerText = "❓";
       seqContainer.appendChild(emptyCard);
 
-      // Render Option Cards
       const options = [...animalHeads].sort(() => Math.random() - 0.5);
       options.forEach(opt => {
         const optBtn = document.createElement('button');
-        optBtn.className = "btn-3d btn-3d-yellow game-card p-4 text-4xl sm:text-5xl hover:scale-105 transition flex items-center justify-center";
+        optBtn.className = "btn-3d btn-3d-amber glass-card p-4 text-4xl sm:text-5xl hover:scale-105 transition flex items-center justify-center";
         optBtn.innerText = opt.emoji;
         optBtn.onclick = () => checkPolaAnswer(opt.id);
         optContainer.appendChild(optBtn);
