@@ -1,245 +1,989 @@
-<!doctype html>
-<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260930-05-8966983","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+<!DOCTYPE html>
+<html lang="id">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GACLOAN — Games Ceria Logika Anak</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;600;700;800&amp;family=Baloo+2:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+  <title>GACLOAN - Games Ceria Logika Anak</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
-    :root{--ink:#31526a;--sky:#9eddf4;--cream:#fff9df;--mint:#bdeed0;--yellow:#ffd95a;--pink:#ffadc2;--blue:#57aee6;--coral:#ff9388;--green:#91dfa5}
-    *{box-sizing:border-box} body{margin:0;width:100%;color:var(--ink);font-family:"Alegreya Sans",sans-serif}
-    .app-shell{width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));overflow:hidden;position:relative;background:linear-gradient(180deg,#9eddf4 0%,#e7f8ff 53%,#d2f2c6 53%,#c6eeb8 100%)}
-    .app-shell:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background-image:radial-gradient(#fff 1.5px,transparent 1.5px);background-size:22px 22px}
-    .screen{position:relative;z-index:1;display:none;width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));padding:22px}.screen.active{display:flex;animation:rise .35s ease both}
-    .view{animation:rise .3s ease both}.is-hidden{display:none!important}.content-wrap{width:100%;max-width:1060px;margin:auto}.title-font{font-family:"Baloo 2",cursive}
-    .cloud{position:absolute;color:#fff;font-size:3rem;opacity:.86;filter:drop-shadow(0 4px 0 rgba(49,82,106,.08))}.cloud.a{top:2%;left:5%}.cloud.b{top:12%;right:6%;font-size:2.25rem}.cloud.c{bottom:9%;right:4%;font-size:2.4rem}
-    .card{border:4px solid rgba(255,255,255,.94);border-radius:27px;box-shadow:0 8px 0 rgba(49,82,106,.16),0 17px 27px rgba(53,107,127,.13)}
-    .button-3d{border:0;border-bottom:7px solid rgba(42,82,91,.29);border-radius:17px;box-shadow:0 5px 0 rgba(49,82,106,.08);cursor:pointer;transition:.15s;min-height:52px}
-    .button-3d:hover,.menu-card:hover,.animal-card:hover,.answer-card:hover{transform:translateY(-4px)}.button-3d:active,.menu-card:active,.animal-card:active,.answer-card:active{transform:translateY(4px);border-bottom-width:2px;box-shadow:none}
-    button:focus-visible,.drop-zone:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
-    .menu-card,.animal-card,.answer-card{border:4px solid white;border-radius:25px;box-shadow:0 8px 0 rgba(49,82,106,.17),0 14px 22px rgba(49,82,106,.11);cursor:pointer;transition:.15s}
-    .headerbar{background:rgba(255,255,255,.86);border:3px solid white;border-radius:21px;box-shadow:0 6px 0 rgba(49,82,106,.12);backdrop-filter:blur(8px)}
-    .animal-face{font-size:4rem;line-height:1;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 5px 0 rgba(49,82,106,.1))}
-    .tab-btn.active{background:#57aee6!important;color:white!important;border-bottom-color:#2876a7!important}.correct{background:#aeecc2!important;border-color:#399665!important}.wrong{background:#ffc2c8!important;border-color:#e26e7b!important}
-    .cow-stage{height:236px;position:relative;overflow:hidden}.cow-stage img{position:absolute;width:34%;height:100%;object-fit:contain;left:33%;top:0;padding:6px}.drop-zone{position:absolute;width:29%;min-height:34px;padding:4px 6px;border:2px dashed #4e9cca;border-radius:12px;background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:800;z-index:3}.drop-zone.over{background:#fff5a9;transform:scale(1.03)}
-    .part-marker{position:absolute;width:11px;height:11px;background:#ff8d79;border:3px solid white;border-radius:99px;box-shadow:0 0 0 2px var(--ink);z-index:2}.pointer-line{position:absolute;height:2px;background:var(--ink);transform-origin:left;z-index:1}
-    .label-chip.selected{outline:4px solid #57aee6;transform:translateY(-2px)}.label-chip.used{opacity:.3;pointer-events:none}
-    .confetti{position:fixed;top:-20px;z-index:50;width:11px;height:11px;border-radius:3px;animation:fall 1.8s linear forwards;pointer-events:none}
-    @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes float{50%{transform:translateY(-8px) rotate(2deg)}}@keyframes fall{to{transform:translate(var(--x),calc(100 * min(var(--vh,1vh),1vh) + 30px)) rotate(720deg);opacity:0}}
-    @media(max-width:640px){.screen{padding:14px}.animal-face{font-size:3rem}.cow-stage{height:245px}.cow-stage img{width:40%;left:30%}.drop-zone{width:31%;font-size:9px}.card{border-radius:22px}}
+    body {
+      font-family: 'Fredoka', 'Nunito', sans-serif;
+      background-color: #EBF8FF;
+      user-select: none;
+    }
+    
+    .btn-3d {
+      transition: all 0.1s ease;
+      position: relative;
+    }
+    .btn-3d:active {
+      transform: translateY(6px) !important;
+      box-shadow: 0 0 0 transparent !important;
+    }
+    
+    .btn-3d-yellow {
+      background-color: #FBBF24;
+      border: 3px solid #B45309;
+      box-shadow: 0 6px 0 #B45309;
+      color: #78350F;
+    }
+    .btn-3d-green {
+      background-color: #34D399;
+      border: 3px solid #065F46;
+      box-shadow: 0 6px 0 #065F46;
+      color: #064E3B;
+    }
+    .btn-3d-blue {
+      background-color: #60A5FA;
+      border: 3px solid #1E40AF;
+      box-shadow: 0 6px 0 #1E40AF;
+      color: #1E3A8A;
+    }
+    .btn-3d-purple {
+      background-color: #C084FC;
+      border: 3px solid #6B21A8;
+      box-shadow: 0 6px 0 #6B21A8;
+      color: #581C87;
+    }
+    .btn-3d-red {
+      background-color: #F87171;
+      border: 3px solid #991B1B;
+      box-shadow: 0 6px 0 #991B1B;
+      color: #7F1D1D;
+    }
+    .btn-3d-gray {
+      background-color: #9CA3AF;
+      border: 3px solid #374151;
+      box-shadow: 0 6px 0 #374151;
+      color: #1F2937;
+    }
+
+    .game-card {
+      background: white;
+      border: 4px solid #E5E7EB;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      border-radius: 1.5rem;
+    }
+
+    .drop-zone {
+      border: 3px dashed #9CA3AF;
+      background: #F3F4F6;
+      transition: all 0.2s;
+    }
+    .drop-zone.hovered {
+      background: #FEF08A;
+      border-color: #EAB308;
+    }
+    .drop-zone.filled {
+      border: 3px solid #10B981;
+      background: #D1FAE5;
+    }
+
+    @keyframes bounce-gentle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .animate-bounce-gentle {
+      animation: bounce-gentle 2s infinite ease-in-out;
+    }
   </style>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
-  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
-  <script src="/_sdk/6e4b845d05dd79e4.editing_sdk.js" type="text/javascript" integrity="sha512-nfDAoBO2Sn6o6rLYgdnzgUs0nZfi4v1NV7M2ioocHZ6oj+ZnIEUmJGLGqFu2dnCue3Bjs5kWMae4qsFt05LfIA=="></script>
-  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
- </head>
- <body data-template-id="__page-root" style="background: linear-gradient(rgb(158, 221, 244) 0%, rgb(231, 248, 255) 53%, rgb(210, 242, 198) 53%, rgb(198, 238, 184) 100%);">
-  <div class="app-shell"><span class="cloud a" aria-hidden="true">☁</span><span class="cloud b" aria-hidden="true">☁</span><span class="cloud c" aria-hidden="true">☁</span>
-   <section id="welcome-screen" class="screen active items-center justify-center" aria-labelledby="welcome-title">
-    <main class="content-wrap max-w-3xl">
-     <div class="card bg-[#fff9df] p-6 text-center md:p-10">
-      <div class="mb-4 flex justify-center gap-2" aria-hidden="true">
-       <span class="animal-face">🐮</span><span class="animal-face" style="animation-delay:.25s">🐐</span><span class="animal-face" style="animation-delay:.5s">🐱</span><span class="animal-face" style="animation-delay:.75s">🐴</span>
-      </div>
-      <p data-template-id="welcome-kicker" class="canva-text title-font font-bold tracking-wide" style="color: rgb(76, 154, 195); font-weight: 700; font-style: normal; font-size: 18px;">AYO BELAJAR SAMBIL BERMAIN!</p>
-      <h1 id="welcome-title" data-template-id="welcome-title" class="canva-text title-font font-extrabold leading-tight" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">GACLOAN — Games Ceria Logika Anak</h1>
-      <p data-template-id="welcome-intro" class="canva-text mt-3 font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Mari mengenal binatang berkaki empat bersama teman-teman lucu!</p>
-      <form id="name-form" class="mx-auto mt-7 max-w-lg text-left"><label data-template-id="name-label" class="canva-text mb-2 block font-extrabold" for="child-name" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Masukkan Namamu:</label> <input id="child-name" class="w-full rounded-2xl border-4 border-white bg-white px-5 py-4 text-xl font-bold text-[#31526a] shadow-inner outline-none focus:ring-4 focus:ring-[#ffd95a]" maxlength="24" autocomplete="name">
-       <p id="name-message" class="mt-2 h-5 font-bold text-[#db536b]" aria-live="polite"></p><button data-template-id="start-button" class="canva-button button-3d mt-4 w-full bg-[#ffd95a] px-5 py-3 title-font font-extrabold" type="submit" style="background: rgb(255, 217, 90); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">MASUK / MULAI MAIN</button>
-      </form>
-     </div>
-    </main>
-   </section>
-   <section id="game-screen" class="screen flex-col gap-5" aria-label="Aplikasi permainan">
-    <header class="headerbar mx-auto flex w-full max-w-[1060px] items-center justify-between gap-3 px-4 py-3"><button id="home-button" data-template-id="home-button" class="canva-button button-3d flex items-center gap-2 bg-[#b9ebc6] px-4 py-2 font-extrabold" type="button" style="background: rgb(185, 235, 198); color: rgb(49, 82, 106);"><i data-lucide="home"></i><span data-template-id="home-text" class="canva-text" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Menu</span></button>
-     <p class="title-font text-center text-xl font-extrabold md:text-2xl"><span data-template-id="hello-prefix" class="canva-text" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Halo,</span> <span id="greeting-name"></span></p><button id="sound-button" data-template-id="sound-button" class="canva-button button-3d bg-[#ffadc2] p-3" type="button" aria-label="Nyalakan atau matikan suara" style="background: rgb(255, 173, 194); color: rgb(49, 82, 106);"><i id="sound-icon" data-lucide="volume-2"></i></button>
-    </header>
-    <main class="content-wrap flex-1">
-     <section id="menu-view" class="view" aria-labelledby="menu-title">
-      <div class="mb-6 text-center">
-       <p data-template-id="menu-kicker" class="canva-text title-font font-bold" style="color: rgb(76, 154, 195); font-weight: 700; font-style: normal; font-size: 18px;">PILIH PETUALANGANMU</p>
-       <h1 id="menu-title" data-template-id="menu-title" class="canva-text title-font font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Ayo Bermain, Belajar, dan Hebat!</h1>
-       <p data-template-id="menu-subtitle" class="canva-text font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Tekan kartu yang ingin kamu jelajahi.</p>
-      </div>
-      <div class="grid gap-5 sm:grid-cols-2"><button data-template-id="menu-goals" class="canva-card menu-card bg-[#fff1a6] p-6 text-left" data-open="goals-view" type="button" style="background: rgb(255, 241, 166); color: rgb(49, 82, 106);"><span class="mb-2 block text-5xl">🎯</span><span data-template-id="menu-goals-title" class="canva-text title-font block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Tujuan Pembelajaran</span><span data-template-id="menu-goals-desc" class="canva-text mt-1 block font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Apa saja yang akan kita pelajari?</span></button> <button data-template-id="menu-learn" class="canva-card menu-card bg-[#bdeed0] p-6 text-left" data-open="learn-view" type="button" style="background: rgb(189, 238, 208); color: rgb(49, 82, 106);"><span class="mb-2 block text-5xl">📚</span><span data-template-id="menu-learn-title" class="canva-text title-font block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Materi Pembelajaran</span><span data-template-id="menu-learn-desc" class="canva-text mt-1 block font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Kenali teman hewan kita.</span></button> <button data-template-id="menu-quiz" class="canva-card menu-card bg-[#c7eafa] p-6 text-left" data-open="quiz-view" type="button" style="background: rgb(199, 234, 250); color: rgb(49, 82, 106);"><span class="mb-2 block text-5xl">🏆</span><span data-template-id="menu-quiz-title" class="canva-text title-font block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Kuis Interaktif</span><span data-template-id="menu-quiz-desc" class="canva-text mt-1 block font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Buktikan kamu sudah pintar!</span></button> <button data-template-id="menu-games" class="canva-card menu-card bg-[#ffd0dc] p-6 text-left" data-open="games-view" type="button" style="background: rgb(255, 208, 220); color: rgb(49, 82, 106);"><span class="mb-2 block text-5xl">🎮</span><span data-template-id="menu-games-title" class="canva-text title-font block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Games Berpikir Komputasional</span><span data-template-id="menu-games-desc" class="canva-text mt-1 block font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Latih logikamu dengan permainan.</span></button>
-      </div>
-      <div class="mt-7 text-center">
-       <button id="change-name" data-template-id="change-name" class="canva-button button-3d bg-[#ffadc2] px-7 py-3 font-extrabold" type="button" style="background: rgb(255, 173, 194); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Keluar / Ganti Nama</button>
-      </div>
-     </section>
-     <section id="goals-view" class="view is-hidden" aria-labelledby="goals-title">
-      <div class="card bg-[#fff9df] p-6 md:p-8">
-       <h1 id="goals-title" data-template-id="goals-title" class="canva-text title-font text-center font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Tujuan Pembelajaran</h1>
-       <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <article data-template-id="goal-one" class="canva-card flex items-center gap-4 bg-[#c7eafa] p-5" style="background: rgb(199, 234, 250);">
-         <span class="text-4xl">🐾</span>
-         <p data-template-id="goal-one-text" class="canva-text font-bold" style="color: rgb(49, 82, 106); font-weight: 700; font-style: normal; font-size: 18px;">Mengenal jenis-jenis binatang berkaki empat.</p>
-        </article>
-        <article data-template-id="goal-two" class="canva-card flex items-center gap-4 bg-[#bdeed0] p-5" style="background: rgb(189, 238, 208);">
-         <span class="text-4xl">🏡</span>
-         <p data-template-id="goal-two-text" class="canva-text font-bold" style="color: rgb(49, 82, 106); font-weight: 700; font-style: normal; font-size: 18px;">Memahami tempat tinggal binatang berkaki empat.</p>
-        </article>
-        <article data-template-id="goal-three" class="canva-card flex items-center gap-4 bg-[#fff1a6] p-5" style="background: rgb(255, 241, 166);">
-         <span class="text-4xl">💛</span>
-         <p data-template-id="goal-three-text" class="canva-text font-bold" style="color: rgb(49, 82, 106); font-weight: 700; font-style: normal; font-size: 18px;">Memahami manfaat binatang bagi manusia.</p>
-        </article>
-        <article data-template-id="goal-four" class="canva-card flex items-center gap-4 bg-[#ffd0dc] p-5" style="background: rgb(255, 208, 220);">
-         <span class="text-4xl">🧩</span>
-         <p data-template-id="goal-four-text" class="canva-text font-bold" style="color: rgb(49, 82, 106); font-weight: 700; font-style: normal; font-size: 18px;">Melatih logika: dekomposisi dan pengenalan pola.</p>
-        </article>
-       </div>
-       <div class="mt-7 text-center">
-        <button data-template-id="back-goals" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button" style="background: rgb(87, 174, 230); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Kembali ke Menu Utama</button>
-       </div>
-      </div>
-     </section>
-     <section id="learn-view" class="view is-hidden" aria-labelledby="learn-title">
-      <div class="mb-5 text-center">
-       <h1 id="learn-title" data-template-id="learn-title" class="canva-text title-font font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Materi Binatang Berkaki 4</h1>
-       <p data-template-id="learn-subtitle" class="canva-text font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Pilih hewan untuk mengenalnya lebih dekat.</p>
-      </div>
-      <div class="mb-5 grid grid-cols-2 gap-3 md:grid-cols-5"><button class="animal-card bg-[#fff1a6] p-3" data-animal="cow" type="button"><img data-template-id="cow-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy" src="https://images.pexels.com/photos/10532350/pexels-photo-10532350.jpeg" alt="Sapi cokelat sedang merumput di lapangan hijau"><span data-template-id="cow-name" class="canva-text title-font mt-1 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Sapi</span></button> <button class="animal-card bg-[#bdeed0] p-3" data-animal="goat" type="button"><img data-template-id="goat-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy" src="https://images.pexels.com/photos/37245538/pexels-photo-37245538.jpeg" alt="Kambing berdiri di lapangan berumput"><span data-template-id="goat-name" class="canva-text title-font mt-1 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Kambing</span></button> <button class="animal-card bg-[#ffd0dc] p-3" data-animal="cat" type="button"><img data-template-id="cat-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy" src="https://images.pexels.com/photos/7790677/pexels-photo-7790677.jpeg" alt="Kucing tabby berbulu dengan latar kuning cerah"><span data-template-id="cat-name" class="canva-text title-font mt-1 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Kucing</span></button> <button class="animal-card bg-[#c7eafa] p-3" data-animal="horse" type="button"><img data-template-id="horse-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy" src="https://images.pexels.com/photos/12002762/pexels-photo-12002762.jpeg" alt="Kuda cokelat berdiri di antara pepohonan hijau"><span data-template-id="horse-name" class="canva-text title-font mt-1 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Kuda</span></button> <button class="animal-card bg-[#e4d4fa] p-3" data-animal="dog" type="button"><img data-template-id="dog-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy" src="https://images.pexels.com/photos/923901/pexels-photo-923901.jpeg" alt="Anjing bahagia memakai kalung merah di luar ruangan"><span data-template-id="dog-name" class="canva-text title-font mt-1 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Anjing</span></button>
-      </div>
-      <article class="card bg-white p-5 md:p-7">
-       <div class="flex items-center gap-4">
-        <span id="animal-emoji" class="text-6xl">🐮</span>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-blue-100 via-yellow-50 to-green-100 p-2 sm:p-4 text-slate-800">
+
+  <!-- APP CONTAINER -->
+  <div class="max-w-4xl mx-auto min-h-[92vh] flex flex-col justify-between relative overflow-hidden">
+    
+    <!-- HEADER NAV (Menampil nama & audio control jika sudah login) -->
+    <header id="app-header" class="hidden mb-4 bg-white/80 backdrop-blur-md rounded-2xl p-3 border-4 border-yellow-300 shadow-md flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-3xl">🐾</span>
         <div>
-         <h2 id="animal-heading" class="title-font text-3xl font-extrabold"></h2>
-         <p id="animal-tagline" class="font-bold"></p>
+          <h1 class="font-bold text-xl text-yellow-600 leading-none">GACLOAN</h1>
+          <p class="text-xs text-slate-500 font-semibold">Games Ceria Logika Anak</p>
         </div>
-       </div>
-       <div class="mt-5 grid grid-cols-2 gap-2 md:grid-cols-4">
-        <button data-template-id="tab-about" class="canva-button button-3d tab-btn active bg-[#fff1a6] p-2 font-bold" data-tab="about" type="button" style="background: rgb(255, 241, 166); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Apa Itu?</button><button data-template-id="tab-home" class="canva-button button-3d tab-btn bg-[#bdeed0] p-2 font-bold" data-tab="home" type="button" style="background: rgb(189, 238, 208); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Tempat Tinggal</button><button data-template-id="tab-benefit" class="canva-button button-3d tab-btn bg-[#c7eafa] p-2 font-bold" data-tab="benefit" type="button" style="background: rgb(199, 234, 250); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Manfaat</button><button data-template-id="tab-fact" class="canva-button button-3d tab-btn bg-[#ffd0dc] p-2 font-bold" data-tab="fact" type="button" style="background: rgb(255, 208, 220); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Fakta Seru</button>
-       </div>
-       <p id="animal-detail" class="mt-5 rounded-2xl bg-[#f5fbff] p-5 text-lg font-semibold"></p><button id="animal-sound" data-template-id="animal-sound" class="canva-button button-3d mt-4 bg-[#ffadc2] px-5 py-2 font-extrabold" type="button" style="background: rgb(255, 173, 194); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">▶ Dengarkan Suara Hewan</button>
-      </article>
-      <div class="mt-7 text-center">
-       <button data-template-id="back-learn" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button" style="background: rgb(87, 174, 230); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Kembali ke Menu Utama</button>
       </div>
-     </section>
-     <section id="quiz-view" class="view is-hidden" aria-labelledby="quiz-title">
-      <div class="card mx-auto max-w-3xl bg-[#fff9df] p-6 md:p-8">
-       <div class="flex items-center justify-between gap-3">
-        <h1 id="quiz-title" data-template-id="quiz-title" class="canva-text title-font font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Kuis Interaktif</h1><span id="quiz-progress" class="rounded-full bg-[#c7eafa] px-4 py-2 font-extrabold"></span>
-       </div>
-       <div class="mt-5 text-center">
-        <div id="quiz-emoji" class="text-7xl">
-         🐮
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="bg-yellow-100 border-2 border-yellow-400 rounded-full px-3 py-1 flex items-center gap-1">
+          <span class="text-lg">👧🏻</span>
+          <span id="header-user-name" class="font-extrabold text-yellow-800 text-sm">Teman</span>
         </div>
-        <h2 id="quiz-question" class="title-font mt-3 text-2xl font-extrabold md:text-3xl"></h2>
-       </div>
-       <div id="quiz-options" class="mt-6 grid grid-cols-2 gap-3"></div>
-       <p id="quiz-feedback" class="mt-5 min-h-8 text-center text-xl font-extrabold" aria-live="polite"></p>
-       <div id="quiz-finish" class="is-hidden mt-4 text-center">
-        <p data-template-id="quiz-finish-text" class="canva-text title-font text-2xl font-extrabold" style="color: rgb(44, 154, 99); font-weight: 800; font-style: normal; font-size: 18px;">Luar biasa! Kamu menyelesaikan semua kuis!</p><button id="quiz-restart" data-template-id="quiz-restart" class="canva-button button-3d mt-3 bg-[#ffd95a] px-6 py-3 font-extrabold" type="button" style="background: rgb(255, 217, 90); color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Main Kuis Lagi</button>
-       </div>
-       <div class="mt-6 text-center">
-        <button data-template-id="back-quiz" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button" style="background: rgb(87, 174, 230); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Kembali ke Menu Utama</button>
-       </div>
+        <button id="audio-toggle" onclick="toggleAudio()" class="btn-3d btn-3d-yellow text-sm p-2 rounded-full flex items-center justify-center">
+          🔊
+        </button>
+        <button onclick="logout()" class="btn-3d btn-3d-red text-xs px-3 py-2 rounded-xl font-bold">
+          Keluar
+        </button>
       </div>
-     </section>
-     <section id="games-view" class="view is-hidden" aria-labelledby="games-title">
-      <div class="mb-6 text-center">
-       <h1 id="games-title" data-template-id="games-title" class="canva-text title-font font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Games Berpikir Komputasional</h1>
-       <p data-template-id="games-subtitle" class="canva-text font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Pilih permainan lalu tentukan levelmu!</p>
-      </div>
-      <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-       <button data-template-id="decomp-card" class="canva-card menu-card bg-[#bdeed0] p-7 text-left" data-game="decomp" type="button" style="background: rgb(189, 238, 208); color: rgb(49, 82, 106);"><span class="text-6xl">🐮</span><span data-template-id="decomp-card-title" class="canva-text title-font mt-3 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Game Dekomposisi</span><span data-template-id="decomp-card-desc" class="canva-text mt-2 block font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Kenali bagian tubuh hewan dengan tepat.</span></button><button data-template-id="pattern-card" class="canva-card menu-card bg-[#ffd0dc] p-7 text-left" data-game="pattern" type="button" style="background: rgb(255, 208, 220); color: rgb(49, 82, 106);"><span class="text-6xl">🐮 🐱</span><span data-template-id="pattern-card-title" class="canva-text title-font mt-3 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Game Pola Gambar</span><span data-template-id="pattern-card-desc" class="canva-text mt-2 block font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Lanjutkan pola kepala hewan yang hilang.</span></button>
-      </div>
-      <div class="mt-7 text-center">
-       <button data-template-id="back-games" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button" style="background: rgb(87, 174, 230); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Kembali ke Menu Utama</button>
-      </div>
-     </section>
-     <section id="levels-view" class="view is-hidden" aria-labelledby="levels-title">
-      <div class="card mx-auto max-w-4xl bg-[#fff9df] p-6 text-center md:p-8">
-       <span class="text-5xl">🌟</span>
-       <h1 id="levels-title" data-template-id="levels-title" class="canva-text title-font font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Pilih Level Permainan</h1>
-       <p id="selected-game-name" class="title-font text-2xl font-bold"></p>
-       <p data-template-id="levels-subtitle" class="canva-text mt-2 font-semibold" style="color: rgb(84, 112, 131); font-weight: 600; font-style: normal; font-size: 18px;">Mulai dari level yang paling nyaman untukmu.</p>
-       <div class="mt-7 grid gap-5 md:grid-cols-3">
-        <button data-template-id="easy-level" class="canva-card button-3d bg-[#91dfa5] p-6" data-level="easy" type="button" style="background: rgb(145, 223, 165); color: rgb(49, 82, 106);"><span class="text-5xl">🌱</span><span data-template-id="easy-level-text" class="canva-text title-font mt-2 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Level Mudah</span></button><button data-template-id="medium-level" class="canva-card button-3d bg-[#ffd95a] p-6" data-level="medium" type="button" style="background: rgb(255, 217, 90); color: rgb(49, 82, 106);"><span class="text-5xl">☀️</span><span data-template-id="medium-level-text" class="canva-text title-font mt-2 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Level Sedang</span></button><button data-template-id="hard-level" class="canva-card button-3d bg-[#ff9388] p-6" data-level="hard" type="button" style="background: rgb(255, 147, 136); color: rgb(49, 82, 106);"><span class="text-5xl">🔥</span><span data-template-id="hard-level-text" class="canva-text title-font mt-2 block font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 18px;">Level Sulit</span></button>
-       </div><button id="back-levels" data-template-id="back-levels" class="canva-button button-3d mt-7 bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button" style="background: rgb(87, 174, 230); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Kembali Pilih Game</button>
-      </div>
-     </section>
-     <section id="decomp-view" class="view is-hidden" aria-labelledby="decomp-title">
-      <div class="card mx-auto max-w-5xl bg-[#fff9df] p-5 md:p-7">
-       <div class="text-center">
-        <h1 id="decomp-title" data-template-id="decomp-title" class="canva-text title-font font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Game Dekomposisi Tubuh Sapi</h1>
-        <p data-template-id="decomp-instruction" class="canva-text font-bold" style="color: rgb(84, 112, 131); font-weight: 700; font-style: normal; font-size: 18px;">Tarik label ke tempat yang tepat, atau tekan label lalu tekan kotaknya.</p>
-       </div>
-       <div class="mx-auto mt-5 max-w-4xl">
-        <div class="cow-stage rounded-3xl border-4 border-white bg-[#bdeed0]">
-         <img data-template-id="decomp-cow-image" class="canva-image" loading="lazy" src="canva://MAHWrn8YIw4/1" alt="Ilustrasi sapi kartun tampak seluruh badan">
-         <div id="drop-targets"></div>
+    </header>
+
+    <!-- CONTENT AREA -->
+    <main class="flex-grow flex items-center justify-center py-2">
+      
+      <!-- ================= 1. PAGE LOGIN ================= -->
+      <section id="page-login" class="w-full max-w-md text-center">
+        <div class="game-card p-6 sm:p-8 border-yellow-300 bg-white relative">
+          <div class="text-6xl mb-3 animate-bounce-gentle">🐮</div>
+          <h1 class="text-3xl font-extrabold text-yellow-500 mb-1 tracking-wide">GACLOAN</h1>
+          <p class="text-sm font-bold text-slate-500 mb-6">Games Ceria Logika Anak (Usia 5-6 Tahun)<br><span class="text-xs text-emerald-600">Subtema: Binatang Berkaki 4</span></p>
+
+          <form onsubmit="handleLogin(event)" class="space-y-4">
+            <div class="text-left">
+              <label class="block text-sm font-bold text-slate-600 mb-1 ml-1">Siapa Namamu?</label>
+              <input type="text" id="input-nama" required placeholder="Tulis namamu di sini..." class="w-full text-center text-lg font-bold p-3 border-4 border-yellow-200 rounded-2xl focus:outline-none focus:border-yellow-400 bg-yellow-50 placeholder-slate-400">
+            </div>
+
+            <button type="submit" class="btn-3d btn-3d-green w-full text-xl font-black py-4 rounded-2xl tracking-wider">
+              MULAI MAIN 🚀
+            </button>
+          </form>
         </div>
-        <h2 data-template-id="labels-heading" class="canva-text title-font mt-5 text-center font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 27px;">Pilih Nama Bagian Tubuh</h2>
-        <div id="label-bank" class="mt-4 grid grid-cols-2 gap-3"></div>
-        <p id="decomp-feedback" class="mt-4 min-h-8 text-center text-xl font-extrabold" aria-live="polite"></p>
-       </div>
-       <div id="decomp-finish" class="is-hidden mt-4 text-center">
-        <p data-template-id="decomp-finish-text" class="canva-text title-font text-2xl font-extrabold" style="color: rgb(44, 154, 99); font-weight: 800; font-style: normal; font-size: 18px;">Hebat! Semua bagian tubuh sudah tepat! 🎉</p>
-       </div>
-       <div class="mt-6 text-center">
-        <button id="back-decomp" data-template-id="back-decomp" class="canva-button button-3d bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button" style="background: rgb(87, 174, 230); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Kembali ke Level</button>
-       </div>
-      </div>
-     </section>
-     <section id="pattern-view" class="view is-hidden" aria-labelledby="pattern-title">
-      <div class="card mx-auto max-w-4xl bg-[#fff9df] p-5 text-center md:p-8">
-       <h1 id="pattern-title" data-template-id="pattern-title" class="canva-text title-font font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 36px;">Game Pola Gambar</h1>
-       <p data-template-id="pattern-instruction" class="canva-text font-bold" style="color: rgb(84, 112, 131); font-weight: 700; font-style: normal; font-size: 18px;">Perhatikan urutannya, lalu pilih gambar yang tepat.</p>
-       <div id="pattern-sequence" class="mt-7 flex flex-wrap justify-center gap-3"></div>
-       <h2 data-template-id="pattern-question" class="canva-text title-font mt-7 font-extrabold" style="color: rgb(49, 82, 106); font-weight: 800; font-style: normal; font-size: 27px;">Gambar apa yang hilang?</h2>
-       <div id="pattern-options" class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4"></div>
-       <p id="pattern-feedback" class="mt-5 min-h-8 text-xl font-extrabold" aria-live="polite"></p>
-       <div id="pattern-finish" class="is-hidden">
-        <p data-template-id="pattern-finish-text" class="canva-text title-font text-2xl font-extrabold" style="color: rgb(44, 154, 99); font-weight: 800; font-style: normal; font-size: 18px;">Kamu ahli pola gambar! 🎊</p>
-       </div>
-       <div class="mt-6">
-        <button id="back-pattern" data-template-id="back-pattern" class="canva-button button-3d bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button" style="background: rgb(87, 174, 230); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 18px;">Kembali ke Level</button>
-       </div>
-      </div>
-     </section>
+      </section>
+
+      <!-- ================= 2. PAGE MENU UTAMA ================= -->
+      <section id="page-menu" class="hidden w-full">
+        <div class="text-center mb-6">
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-700">Pilih Menu Belajar & Main</h2>
+          <p class="text-xs sm:text-sm text-slate-500 font-bold">Tekan salah satu tombol di bawah ini ya!</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <!-- Card 1: Tujuan -->
+          <button onclick="navigateTo('page-tujuan')" class="btn-3d btn-3d-blue game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
+            <div class="text-4xl bg-blue-100 p-3 rounded-2xl">🎯</div>
+            <div>
+              <h3 class="text-lg font-black">Tujuan Pembelajaran</h3>
+              <p class="text-xs opacity-80 font-bold">Apa yang akan kita pelajari?</p>
+            </div>
+          </button>
+
+          <!-- Card 2: Materi -->
+          <button onclick="navigateTo('page-materi')" class="btn-3d btn-3d-green game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
+            <div class="text-4xl bg-emerald-100 p-3 rounded-2xl">📖</div>
+            <div>
+              <h3 class="text-lg font-black">Materi Pembelajaran</h3>
+              <p class="text-xs opacity-80 font-bold">Kenal Hewan Berkaki 4</p>
+            </div>
+          </button>
+
+          <!-- Card 3: Kuis -->
+          <button onclick="navigateTo('page-kuis')" class="btn-3d btn-3d-purple game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
+            <div class="text-4xl bg-purple-100 p-3 rounded-2xl">🏆</div>
+            <div>
+              <h3 class="text-lg font-black">Kuis Interaktif</h3>
+              <p class="text-xs opacity-80 font-bold">Uji Pengetahuanmu!</p>
+            </div>
+          </button>
+
+          <!-- Card 4: Games 4 Pilar -->
+          <button onclick="navigateTo('page-games-menu')" class="btn-3d btn-3d-yellow game-card p-5 text-left flex items-center gap-4 hover:scale-[1.02] transition">
+            <div class="text-4xl bg-yellow-100 p-3 rounded-2xl">🎮</div>
+            <div>
+              <h3 class="text-lg font-black">Games Logika</h3>
+              <p class="text-xs opacity-80 font-bold">Dekomposisi & Pola Gambar</p>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= 3. PAGE TUJUAN PEMBELAJARAN ================= -->
+      <section id="page-tujuan" class="hidden w-full max-w-2xl">
+        <div class="game-card p-6 bg-white border-blue-300">
+          <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-100 pb-3">
+            <span class="text-3xl">🎯</span>
+            <h2 class="text-2xl font-black text-blue-600">Tujuan Pembelajaran</h2>
+          </div>
+
+          <div class="space-y-3 font-bold text-slate-700 text-sm sm:text-base">
+            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+              <span class="text-xl">1️⃣</span>
+              <span>Anak dapat mengenali jenis-jenis binatang berkaki empat.</span>
+            </div>
+            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+              <span class="text-xl">2️⃣</span>
+              <span>Anak tahu tempat tinggal (habitat) binatang berkaki empat.</span>
+            </div>
+            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+              <span class="text-xl">3️⃣</span>
+              <span>Anak paham manfaat binatang berkaki empat bagi manusia.</span>
+            </div>
+            <div class="p-3 bg-blue-50 rounded-xl flex items-center gap-3 border border-blue-200">
+              <span class="text-xl">4️⃣</span>
+              <span>Anak mampu melatih kemampuan berpikir komputasional (Dekomposisi & Pengenalan Pola).</span>
+            </div>
+          </div>
+
+          <div class="mt-6 text-center">
+            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray px-6 py-3 rounded-xl font-bold">
+              ⬅ Kembali ke Menu
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 4. PAGE MATERI PEMBELAJARAN ================= -->
+      <section id="page-materi" class="hidden w-full max-w-3xl">
+        <div class="game-card p-4 sm:p-6 bg-white border-emerald-300">
+          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-3xl">📖</span>
+              <h2 class="text-2xl font-black text-emerald-600">Materi Binatang Berkaki 4</h2>
+            </div>
+            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray text-xs px-3 py-2 rounded-xl font-bold">
+              ⬅ Menu Utama
+            </button>
+          </div>
+
+          <!-- Pilihan Hewan Tabs -->
+          <div class="grid grid-cols-4 gap-2 mb-4" id="materi-animal-tabs">
+            <button onclick="showMateriDetail('sapi')" id="tab-sapi" class="btn-3d btn-3d-green p-2 rounded-xl text-center text-xs font-black">
+              <span class="text-2xl block">🐮</span> Sapi
+            </button>
+            <button onclick="showMateriDetail('kambing')" id="tab-kambing" class="btn-3d btn-3d-yellow p-2 rounded-xl text-center text-xs font-black">
+              <span class="text-2xl block">🐐</span> Kambing
+            </button>
+            <button onclick="showMateriDetail('kucing')" id="tab-kucing" class="btn-3d btn-3d-blue p-2 rounded-xl text-center text-xs font-black">
+              <span class="text-2xl block">🐱</span> Kucing
+            </button>
+            <button onclick="showMateriDetail('kuda')" id="tab-kuda" class="btn-3d btn-3d-purple p-2 rounded-xl text-center text-xs font-black">
+              <span class="text-2xl block">🐴</span> Kuda
+            </button>
+          </div>
+
+          <!-- Detail Materi Card Container -->
+          <div id="materi-content" class="bg-slate-50 p-4 rounded-2xl border-2 border-slate-200">
+            <!-- Isi materi diinject via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 5. PAGE KUIS INTERAKTIF ================= -->
+      <section id="page-kuis" class="hidden w-full max-w-2xl">
+        <div class="game-card p-6 bg-white border-purple-300">
+          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-3xl">🏆</span>
+              <h2 class="text-xl font-black text-purple-600">Kuis Pintar</h2>
+            </div>
+            <span id="kuis-progress" class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-xs">Soal 1 / 5</span>
+          </div>
+
+          <div id="kuis-body">
+            <h3 id="kuis-pertanyaan" class="text-lg font-black text-center text-slate-700 mb-6">Pertanyaan Kuis</h3>
+            
+            <div id="kuis-opsi" class="grid grid-cols-2 gap-4 mb-6">
+              <!-- Opsi Jawaban Gambar/Teks diinject via JS -->
+            </div>
+          </div>
+
+          <div id="kuis-selesai" class="hidden text-center py-6">
+            <div class="text-6xl mb-2">🎉</div>
+            <h3 class="text-2xl font-black text-purple-600 mb-2">Hebat Sekali!</h3>
+            <p class="font-bold text-slate-600 mb-4">Kamu telah menyelesaikan Kuis Binatang Berkaki 4!</p>
+            <button onclick="startKuis()" class="btn-3d btn-3d-purple px-6 py-3 rounded-xl font-bold text-sm mr-2">
+              🔄 Main Lagi
+            </button>
+            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray px-6 py-3 rounded-xl font-bold text-xs">
+              ⬅ Menu Utama
+            </button>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-100 flex justify-between items-center">
+            <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray text-xs px-4 py-2 rounded-xl font-bold">
+              ⬅ Menu Utama
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 6. PAGE MENU GAMES 4 PILAR ================= -->
+      <section id="page-games-menu" class="hidden w-full max-w-2xl">
+        <div class="text-center mb-6">
+          <h2 class="text-2xl font-black text-slate-700">Pilih Permainan Logika</h2>
+          <p class="text-xs text-slate-500 font-bold">Asah kemampuan Berpikir Komputasionalmu!</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Game 1: Dekomposisi -->
+          <div class="game-card p-5 bg-white border-green-300 text-center flex flex-col justify-between">
+            <div>
+              <div class="text-5xl mb-2">🧩</div>
+              <h3 class="text-lg font-black text-green-700">Game Dekomposisi</h3>
+              <p class="text-xs text-slate-500 font-bold mt-1 mb-4">Sebutkan & tempelkan bagian-bagian tubuh hewan!</p>
+            </div>
+            <button onclick="showLevelSelect('dekomposisi')" class="btn-3d btn-3d-green w-full py-3 rounded-xl font-bold text-sm">
+              PILIH GAME INI ➡
+            </button>
+          </div>
+
+          <!-- Game 2: Pola Gambar -->
+          <div class="game-card p-5 bg-white border-yellow-300 text-center flex flex-col justify-between">
+            <div>
+              <div class="text-5xl mb-2">🔄</div>
+              <h3 class="text-lg font-black text-yellow-700">Game Pola Gambar</h3>
+              <p class="text-xs text-slate-500 font-bold mt-1 mb-4">Lanjutkan urutan pola gambar kepala hewan!</p>
+            </div>
+            <button onclick="showLevelSelect('pola')" class="btn-3d btn-3d-yellow w-full py-3 rounded-xl font-bold text-sm">
+              PILIH GAME INI ➡
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <button onclick="navigateTo('page-menu')" class="btn-3d btn-3d-gray px-6 py-2 rounded-xl font-bold text-xs">
+            ⬅ Kembali ke Menu
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= 7. PAGE PILIH LEVEL GAME ================= -->
+      <section id="page-level-select" class="hidden w-full max-w-md text-center">
+        <div class="game-card p-6 bg-white border-yellow-300">
+          <div class="text-4xl mb-2">⭐</div>
+          <h2 id="level-select-title" class="text-2xl font-black text-slate-700 mb-1">Pilih Level Game</h2>
+          <p class="text-xs font-bold text-slate-400 mb-6">Pilihlah tingkat kesulitan yang kamu mau:</p>
+
+          <div class="space-y-4">
+            <button onclick="launchGame('mudah')" class="btn-3d btn-3d-green w-full p-4 rounded-2xl text-left flex items-center justify-between">
+              <div>
+                <span class="font-black text-lg block">Level Mudah 🌱</span>
+                <span id="level-desc-mudah" class="text-xs font-bold opacity-80">2 Bagian / Pola 2 Gambar</span>
+              </div>
+              <span class="text-2xl">🟢</span>
+            </button>
+
+            <button onclick="launchGame('sedang')" class="btn-3d btn-3d-yellow w-full p-4 rounded-2xl text-left flex items-center justify-between">
+              <div>
+                <span class="font-black text-lg block">Level Sedang 🌿</span>
+                <span id="level-desc-sedang" class="text-xs font-bold opacity-80">3 Bagian / Pola 3 Gambar</span>
+              </div>
+              <span class="text-2xl">🟡</span>
+            </button>
+
+            <button onclick="launchGame('sulit')" class="btn-3d btn-3d-red w-full p-4 rounded-2xl text-left flex items-center justify-between">
+              <div>
+                <span class="font-black text-lg block">Level Sulit 🌳</span>
+                <span id="level-desc-sulit" class="text-xs font-bold opacity-80">Semua Bagian / Pola 4 Gambar</span>
+              </div>
+              <span class="text-2xl">🔴</span>
+            </button>
+          </div>
+
+          <div class="mt-6">
+            <button onclick="navigateTo('page-games-menu')" class="btn-3d btn-3d-gray px-6 py-2 rounded-xl font-bold text-xs">
+              ⬅ Kembalikan
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 8. GAME DEKOMPOSISI PLAY AREA ================= -->
+      <section id="page-game-dekomposisi" class="hidden w-full max-w-3xl">
+        <div class="game-card p-4 sm:p-6 bg-white border-green-300">
+          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
+            <div>
+              <h3 class="font-black text-lg text-green-700">Game Dekomposisi</h3>
+              <p class="text-xs font-bold text-slate-400">Tarik atau Tekan Label Kata ke Kotak Tubuh Sapi!</p>
+            </div>
+            <span id="dekomposisi-level-badge" class="bg-green-100 text-green-800 text-xs font-extrabold px-3 py-1 rounded-full">Level: Mudah</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+            <!-- Gambar Hewan Interaktif / Target Area -->
+            <div class="md:col-span-2 bg-gradient-to-b from-sky-100 to-emerald-50 rounded-2xl p-4 border-2 border-slate-200 relative min-h-[280px] flex items-center justify-center">
+              
+              <!-- Container Hewan Sapi SVG Custom -->
+              <div class="relative w-full max-w-[320px] aspect-square flex items-center justify-center">
+                <!-- Sapi Illustration SVG -->
+                <svg class="w-full h-full" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Badan -->
+                  <ellipse cx="150" cy="180" rx="90" ry="65" fill="#FFFFFF" stroke="#334155" stroke-width="5"/>
+                  <path d="M120 140 Q140 170 120 200 Q90 180 120 140Z" fill="#334155"/>
+                  <path d="M180 150 Q210 180 190 220 Q160 190 180 150Z" fill="#334155"/>
+                  <!-- Kaki -->
+                  <rect x="90" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
+                  <rect x="125" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
+                  <rect x="160" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
+                  <rect x="195" y="225" width="22" height="50" rx="10" fill="#E2E8F0" stroke="#334155" stroke-width="4"/>
+                  <!-- Kepala -->
+                  <circle cx="90" cy="110" r="45" fill="#FFFFFF" stroke="#334155" stroke-width="5"/>
+                  <!-- Telinga -->
+                  <ellipse cx="50" cy="85" rx="20" ry="10" fill="#F87171" stroke="#334155" stroke-width="4" transform="rotate(-20 50 85)"/>
+                  <ellipse cx="130" cy="85" rx="20" ry="10" fill="#F87171" stroke="#334155" stroke-width="4" transform="rotate(20 130 85)"/>
+                  <!-- Mata -->
+                  <circle cx="75" cy="100" r="6" fill="#334155"/>
+                  <circle cx="105" cy="100" r="6" fill="#334155"/>
+                  <!-- Mulut/Hidung -->
+                  <ellipse cx="90" cy="125" rx="22" ry="14" fill="#FBCFE8" stroke="#334155" stroke-width="3"/>
+                  <circle cx="83" cy="125" r="3" fill="#334155"/>
+                  <circle cx="97" cy="125" r="3" fill="#334155"/>
+                  <!-- Ekor -->
+                  <path d="M235 170 Q260 190 250 220" stroke="#334155" stroke-width="5" fill="none"/>
+                  <circle cx="250" cy="220" r="8" fill="#334155"/>
+                </svg>
+
+                <!-- Drop Target Zones Overlaid -->
+                <div id="drop-targets-container" class="absolute inset-0 pointer-events-none">
+                  <!-- Drop zones diinject via JS sesuai Level -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Area Pilihan Kata/Label -->
+            <div class="flex flex-col justify-center">
+              <h4 class="font-bold text-xs text-slate-500 mb-2 text-center">Pilihan Label Kata:</h4>
+              <div id="dekomposisi-labels" class="flex flex-wrap md:flex-col gap-2 justify-center">
+                <!-- Label Draggable diinject via JS -->
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex justify-between items-center border-t pt-3">
+            <button onclick="showLevelSelect('dekomposisi')" class="btn-3d btn-3d-gray text-xs px-4 py-2 rounded-xl font-bold">
+              ⬅ Ganti Level
+            </button>
+            <button onclick="resetDekomposisi()" class="btn-3d btn-3d-yellow text-xs px-4 py-2 rounded-xl font-bold">
+              🔄 Reset Game
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 9. GAME POLA GAMBAR PLAY AREA ================= -->
+      <section id="page-game-pola" class="hidden w-full max-w-2xl">
+        <div class="game-card p-6 bg-white border-yellow-300">
+          <div class="flex items-center justify-between mb-4 border-b-2 border-slate-100 pb-2">
+            <div>
+              <h3 class="font-black text-lg text-yellow-700">Game Pola Gambar</h3>
+              <p class="text-xs font-bold text-slate-400">Pilihlah Kepala Hewan Berikutnya!</p>
+            </div>
+            <span id="pola-level-badge" class="bg-yellow-100 text-yellow-800 text-xs font-extrabold px-3 py-1 rounded-full">Level: Mudah</span>
+          </div>
+
+          <!-- Deretan Pola Card -->
+          <div class="mb-8">
+            <h4 class="text-center font-bold text-xs text-slate-500 mb-3">Lanjutkan Urutan Pola di Bawah Ini:</h4>
+            <div id="pola-sequence-container" class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap min-h-[100px] p-4 bg-yellow-50 rounded-2xl border-2 border-yellow-200">
+              <!-- Kartu Pola Gambar diinject via JS -->
+            </div>
+          </div>
+
+          <!-- Pilihan Jawaban Cards -->
+          <div>
+            <h4 class="text-center font-bold text-xs text-slate-500 mb-3">Klik Kepala Hewan Yang Tepat:</h4>
+            <div id="pola-options-container" class="flex items-center justify-center gap-4">
+              <!-- Opsi Jawaban Kepala Hewan diinject via JS -->
+            </div>
+          </div>
+
+          <div class="mt-8 flex justify-between items-center border-t pt-3">
+            <button onclick="showLevelSelect('pola')" class="btn-3d btn-3d-gray text-xs px-4 py-2 rounded-xl font-bold">
+              ⬅ Ganti Level
+            </button>
+            <div class="text-xs font-extrabold text-slate-500">
+              Skor: <span id="pola-score" class="text-yellow-600">0</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
-   </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-2 text-xs font-bold text-slate-400">
+      GACLOAN &copy; 2026 - Pembelajaran Anak Usia Dini
+    </footer>
+
   </div>
+
+  <!-- SCRIPT LOGIC MAIN PROGRAM -->
   <script>
-    let childName="", soundOn=true, animal="cow", tab="about", game="", level="easy", selectedLabel=null, quizIndex=0;
-    const animals={
-      cow:{emoji:"🐮",name:"Sapi",tag:"Sahabat peternak yang suka rumput.",about:"Sapi adalah hewan berkaki empat dan menyusui anaknya.",home:"Sapi biasanya tinggal di kandang atau padang rumput.",benefit:"Sapi dapat menghasilkan susu dan membantu memenuhi kebutuhan manusia.",fact:"Sapi suka makan rumput dan jerami. Suaranya “Mooo!”",tone:170},
-      goat:{emoji:"🐐",name:"Kambing",tag:"Lincah dan suka melompat.",about:"Kambing adalah hewan berkaki empat yang berbulu.",home:"Kambing tinggal di kandang yang bersih atau padang rumput.",benefit:"Kambing dapat menghasilkan susu dan daging.",fact:"Kambing suka rumput serta daun. Suaranya “Mbeeek!”",tone:250},
-      cat:{emoji:"🐱",name:"Kucing",tag:"Hewan peliharaan yang lembut.",about:"Kucing adalah hewan berkaki empat yang sering dipelihara.",home:"Kucing tinggal bersama keluarga di rumah yang aman.",benefit:"Kucing menjadi teman bermain dan membantu mengusir tikus.",fact:"Kucing suka makan ikan. Suaranya “Meong!”",tone:420},
-      horse:{emoji:"🐴",name:"Kuda",tag:"Kuat, cepat, dan gagah.",about:"Kuda adalah hewan berkaki empat yang dapat berlari cepat.",home:"Kuda tinggal di kandang atau padang rumput.",benefit:"Kuda dapat membantu manusia membawa barang.",fact:"Kuda makan rumput dan jerami. Suaranya “Hiiiih!”",tone:210},
-      dog:{emoji:"🐶",name:"Anjing",tag:"Penjaga rumah yang setia.",about:"Anjing adalah hewan berkaki empat yang setia.",home:"Anjing dapat tinggal di rumah atau kandang kecil.",benefit:"Anjing dapat menjaga rumah dan menjadi teman bermain.",fact:"Suara anjing adalah “Guk guk!”",tone:330}
+    // Global State
+    let currentUser = "";
+    let isAudioOn = true;
+    let currentSelectedGame = "";
+    let currentLevel = "mudah";
+    let selectedLabelForMobile = null;
+
+    // Web Audio Synthesizer untuk SFX
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    function playSound(type) {
+      if (!isAudioOn) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        if (type === 'click') {
+          osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.05);
+        } else if (type === 'correct') {
+          osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+          osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+          gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.25);
+        } else if (type === 'wrong') {
+          osc.frequency.setValueAtTime(200, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.2);
+        }
+      } catch (e) { console.log(e); }
+    }
+
+    function toggleAudio() {
+      isAudioOn = !isAudioOn;
+      const btn = document.getElementById('audio-toggle');
+      btn.innerText = isAudioOn ? '🔊' : '🔇';
+    }
+
+    // Navigation System
+    function navigateTo(pageId) {
+      playSound('click');
+      const pages = ['page-login', 'page-menu', 'page-tujuan', 'page-materi', 'page-kuis', 'page-games-menu', 'page-level-select', 'page-game-dekomposisi', 'page-game-pola'];
+      pages.forEach(p => {
+        const el = document.getElementById(p);
+        if (el) el.classList.add('hidden');
+      });
+
+      document.getElementById(pageId).classList.remove('hidden');
+
+      if (pageId === 'page-materi') {
+        showMateriDetail('sapi');
+      } else if (pageId === 'page-kuis') {
+        startKuis();
+      }
+    }
+
+    // Login logic
+    function handleLogin(e) {
+      e.preventDefault();
+      const namaInput = document.getElementById('input-nama').value.trim();
+      if (namaInput) {
+        currentUser = namaInput;
+        document.getElementById('header-user-name').innerText = currentUser;
+        document.getElementById('app-header').classList.remove('hidden');
+        navigateTo('page-menu');
+      }
+    }
+
+    function logout() {
+      playSound('click');
+      currentUser = "";
+      document.getElementById('app-header').classList.add('hidden');
+      document.getElementById('input-nama').value = "";
+      navigateTo('page-login');
+    }
+
+    // ================= MATERI DATA & LOGIC =================
+    const dataMateri = {
+      sapi: {
+        nama: "Sapi",
+        emoji: "🐮",
+        deskripsi: "Sapi adalah binatang berkaki 4 yang berbadan besar. Sapi suka makan rumput dan menghasilkan susu segar untuk kita!",
+        habitat: "🏡 Kandang & Padang Rumput",
+        manfaat: "🥛 Menghasilkan Susu & 🥩 Daging Lezat",
+        suara: "Moo~ Moo~"
+      },
+      kambing: {
+        nama: "Kambing",
+        emoji: "🐐",
+        deskripsi: "Kambing adalah binatang berkaki 4 yang memiliki tanduk. Kambing sangat suka makan dedaunan dan rumput.",
+        habitat: "🏡 Kandang & Perbukitan",
+        manfaat: "🥩 Daging, 🥛 Susu Kambing, & 🧶 Bulu",
+        suara: "Mbee~ Mbee~"
+      },
+      kucing: {
+        nama: "Kucing",
+        emoji: "🐱",
+        deskripsi: "Kucing adalah binatang berkaki 4 yang lucu dan lembut. Kucing adalah hewan peliharaan kesayangan di rumah.",
+        habitat: "🏠 Dalam Rumah / Peliharaan",
+        manfaat: "🐱 Teman Bermain & 🐭 Menjaga Rumah dari Tikus",
+        suara: "Meow~ Meow~"
+      },
+      kuda: {
+        nama: "Kuda",
+        emoji: "🐴",
+        deskripsi: "Kuda adalah binatang berkaki 4 yang berlari sangat cepat dan memiliki tubuh yang kuat.",
+        habitat: "🌾 Padang Rumput & Peternakan",
+        manfaat: "🛺 Menarik Delman & 🏇 Olahraga Berkuda",
+        suara: "Ihiii~ Hihihi~"
+      }
     };
-    const questions=[
-      ["🐮","Hewan manakah yang menghasilkan susu?",["🐱 Kucing","🐮 Sapi","🐴 Kuda","🐶 Anjing"],1],
-      ["🐮","Di mana sapi biasanya tinggal?",["🏠 Kandang","🌊 Laut","☁ Awan","🏙 Kota"],0],
-      ["🐱","Hewan manakah yang berbunyi “Meong”?",["🐐 Kambing","🐴 Kuda","🐱 Kucing","🐮 Sapi"],2],
-      ["🐶","Siapa yang dapat menjaga rumah?",["🐶 Anjing","🐮 Sapi","🐴 Kuda","🐐 Kambing"],0],
-      ["🐴","Makanan yang disukai kuda adalah ...",["🍭 Permen","🌿 Rumput","🍕 Pizza","🧊 Es"],1]
+
+    function showMateriDetail(key) {
+      playSound('click');
+      const item = dataMateri[key];
+      const contentEl = document.getElementById('materi-content');
+      
+      contentEl.innerHTML = `
+        <div class="text-center mb-4">
+          <div class="text-7xl mb-1">${item.emoji}</div>
+          <h3 class="text-2xl font-black text-slate-800">${item.nama}</h3>
+        </div>
+
+        <div class="space-y-3 font-bold text-sm">
+          <div class="bg-white p-3 rounded-xl border border-slate-200">
+            <span class="text-emerald-600 block text-xs font-black">A. APA ITUS HEWAN INI?</span>
+            <p class="text-slate-600 mt-1">${item.deskripsi}</p>
+          </div>
+
+          <div class="bg-white p-3 rounded-xl border border-slate-200">
+            <span class="text-emerald-600 block text-xs font-black">B. DIMANA TEMPAT TINGGALNYA?</span>
+            <p class="text-slate-600 mt-1">${item.habitat}</p>
+          </div>
+
+          <div class="bg-white p-3 rounded-xl border border-slate-200">
+            <span class="text-emerald-600 block text-xs font-black">C. APA MANFAATNYA?</span>
+            <p class="text-slate-600 mt-1">${item.manfaat}</p>
+          </div>
+
+          <div class="bg-emerald-100 p-3 rounded-xl border border-emerald-300 text-center flex items-center justify-between">
+            <div>
+              <span class="text-xs font-black text-emerald-800 block">SUARA HEWAN:</span>
+              <span class="text-base font-black text-emerald-900">${item.suara}</span>
+            </div>
+            <button onclick="playSound('correct')" class="btn-3d btn-3d-green text-xs px-3 py-2 rounded-xl font-bold">
+              🔊 Dengar Suara
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    // ================= KUIS INTERAKTIF LOGIC =================
+    const kuisData = [
+      {
+        pertanyaan: "Hewan manakah di bawah ini yang menghasilkan susu untuk kita minum?",
+        opsi: [
+          { teks: "Sapi", emoji: "🐮", benar: true },
+          { teks: "Kucing", emoji: "🐱", benar: false }
+        ]
+      },
+      {
+        pertanyaan: "Berapakah jumlah kaki hewan Sapi, Kambing, dan Kuda?",
+        opsi: [
+          { teks: "2 Kaki", emoji: "🦆", benar: false },
+          { teks: "4 Kaki", emoji: "🐴", benar: true }
+        ]
+      },
+      {
+        pertanyaan: "Dimanakah tempat tinggal Kucing peliharaan?",
+        opsi: [
+          { teks: "Dalam Rumah", emoji: "🏠", benar: true },
+          { teks: "Di Laut", emoji: "🌊", benar: false }
+        ]
+      },
+      {
+        pertanyaan: "Hewan berkaki 4 mana yang suka makan rumput dan memiliki tanduk?",
+        opsi: [
+          { teks: "Kambing", emoji: "🐐", benar: true },
+          { teks: "Ayam", emoji: "🐔", benar: false }
+        ]
+      },
+      {
+        pertanyaan: "Hewan berkaki 4 mana yang bisa membantu menarik Delman?",
+        opsi: [
+          { teks: "Kuda", emoji: "🐴", benar: true },
+          { teks: "Kucing", emoji: "🐱", benar: false }
+        ]
+      }
     ];
-    function tone(freq=440,duration=.13,type="sine"){if(!soundOn)return;const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C(),o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(.08,c.currentTime);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+duration);o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+duration)}
-    function success(){tone(523,.1);setTimeout(()=>tone(659,.1),120);setTimeout(()=>tone(784,.18),240)}
-    function celebrate(){["#ffd95a","#ff9388","#57aee6","#91dfa5","#ffadc2"].forEach((color,i)=>{for(let n=0;n<6;n++){const e=document.createElement("i");e.className="confetti";e.style.left=Math.random()*100+"%";e.style.background=color;e.style.setProperty("--x",(Math.random()*220-110)+"px");e.style.animationDelay=Math.random()*.3+"s";document.body.append(e);setTimeout(()=>e.remove(),2200)}})}
-    function show(id){document.querySelectorAll(".view").forEach(v=>v.classList.add("is-hidden"));document.getElementById(id).classList.remove("is-hidden");window.scrollTo({top:0,behavior:"smooth"})}
-    function updateAnimal(){const a=animals[animal];document.getElementById("animal-emoji").textContent=a.emoji;document.getElementById("animal-heading").textContent=a.name;document.getElementById("animal-tagline").textContent=a.tag;document.getElementById("animal-detail").textContent=a[tab]}
-    function renderQuiz(){const q=questions[quizIndex], box=document.getElementById("quiz-options");document.getElementById("quiz-progress").textContent=(quizIndex+1)+" / "+questions.length;document.getElementById("quiz-emoji").textContent=q[0];document.getElementById("quiz-question").textContent=q[1];document.getElementById("quiz-feedback").textContent="";box.replaceChildren();q[2].forEach((text,index)=>{const b=document.createElement("button");b.type="button";b.className="answer-card bg-white p-4 text-lg font-extrabold";b.textContent=text;b.addEventListener("click",()=>answerQuiz(index,b));box.append(b)})}
-    function answerQuiz(index,button){const q=questions[quizIndex],msg=document.getElementById("quiz-feedback");if(index===q[3]){button.classList.add("correct");msg.textContent="Hebat! Jawabanmu benar! ⭐";msg.style.color="#26925c";success();setTimeout(()=>{quizIndex++;if(quizIndex<questions.length)renderQuiz();else{document.getElementById("quiz-options").replaceChildren();document.getElementById("quiz-question").textContent="Kuis selesai!";document.getElementById("quiz-emoji").textContent="🏆";document.getElementById("quiz-progress").textContent="Selesai";document.getElementById("quiz-finish").classList.remove("is-hidden");celebrate()}},700)}else{button.classList.add("wrong");msg.textContent="Belum tepat, yuk coba lagi!";msg.style.color="#db536b";tone(180,.18,"square");setTimeout(()=>button.classList.remove("wrong"),450)}}
-    const partSets={easy:["Kepala","Kaki"],medium:["Kepala","Badan","Kaki"],hard:["Kepala","Telinga","Mata","Badan","Kaki","Ekor"]};
-    const positions={Kepala:[54,18],Telinga:[22,24],Mata:[57,29],Badan:[45,52],Kaki:[52,79],Ekor:[29,53]};
-    const zones={Kepala:[2,8],Telinga:[69,8],Mata:[69,27],Badan:[2,45],Kaki:[69,58],Ekor:[2,68]};
-    function renderDecomp(){selectedLabel=null;const parts=partSets[level],targets=document.getElementById("drop-targets"),bank=document.getElementById("label-bank");targets.replaceChildren();bank.replaceChildren();document.getElementById("decomp-feedback").textContent="";document.getElementById("decomp-finish").classList.add("is-hidden");parts.forEach(part=>{const p=positions[part],z=zones[part],mark=document.createElement("span"),line=document.createElement("span"),drop=document.createElement("button");mark.className="part-marker";mark.style.left=p[0]+"%";mark.style.top=p[1]+"%";line.className="pointer-line";line.style.left=p[0]+"%";line.style.top=p[1]+"%";line.style.width=Math.abs(z[0]-p[0])+"%";line.style.transform=`rotate(${z[0]<p[0]?180:0}deg)`;drop.type="button";drop.className="drop-zone";drop.dataset.part=part;drop.style.left=z[0]+"%";drop.style.top=z[1]+"%";drop.textContent="Taruh jawaban di sini";drop.addEventListener("click",()=>place(drop));drop.addEventListener("dragover",e=>{e.preventDefault();drop.classList.add("over")});drop.addEventListener("dragleave",()=>drop.classList.remove("over"));drop.addEventListener("drop",e=>{e.preventDefault();drop.classList.remove("over");selectedLabel=document.querySelector(`[data-part="${e.dataTransfer.getData("text/plain")}"]`);place(drop)});targets.append(mark,line,drop)});parts.forEach(part=>{const b=document.createElement("button");b.type="button";b.draggable=true;b.dataset.part=part;b.className="label-chip button-3d bg-[#ffd95a] px-3 py-3 font-extrabold";b.textContent=part;b.addEventListener("click",()=>{document.querySelectorAll(".label-chip").forEach(x=>x.classList.remove("selected"));selectedLabel=b;b.classList.add("selected")});b.addEventListener("dragstart",e=>e.dataTransfer.setData("text/plain",part));bank.append(b)})}
-    function place(zone){if(!selectedLabel||zone.dataset.done)return;const msg=document.getElementById("decomp-feedback");if(selectedLabel.dataset.part===zone.dataset.part){zone.dataset.done="yes";zone.textContent=selectedLabel.textContent;zone.classList.add("correct");selectedLabel.classList.add("used");selectedLabel.classList.remove("selected");selectedLabel=null;msg.textContent="Bagus, tepat sekali!";msg.style.color="#26925c";success();if(document.querySelectorAll(".drop-zone[data-done='yes']").length===partSets[level].length){document.getElementById("decomp-finish").classList.remove("is-hidden");celebrate()}}else{msg.textContent="Coba garis dan tempat yang lain ya!";msg.style.color="#db536b";tone(180,.18,"square")}}
-    function renderPattern(){const sequence=level==="easy"?["🐮","🐱","🐮"]:level==="medium"?["🐮","🐱","🐴","🐮","🐱"]:["🐮","🐮","🐱","🐱","🐮","🐮"],answer=level==="medium"?"🐴":"🐱",seq=document.getElementById("pattern-sequence"),ops=document.getElementById("pattern-options");seq.replaceChildren();ops.replaceChildren();document.getElementById("pattern-feedback").textContent="";document.getElementById("pattern-finish").classList.add("is-hidden");[...sequence,"❓"].forEach(x=>{const d=document.createElement("div");d.className="card flex h-20 w-20 items-center justify-center bg-white text-5xl";d.textContent=x;seq.append(d)});["🐮","🐱","🐴","🐶"].forEach(x=>{const b=document.createElement("button");b.className="answer-card bg-[#c7eafa] p-4 text-5xl";b.textContent=x;b.addEventListener("click",()=>{const m=document.getElementById("pattern-feedback");if(x===answer){b.classList.add("correct");m.textContent="Benar! Polanya lengkap! 🌟";m.style.color="#26925c";document.getElementById("pattern-finish").classList.remove("is-hidden");success();celebrate()}else{b.classList.add("wrong");m.textContent="Yuk, lihat polanya lagi!";m.style.color="#db536b";tone(180,.18,"square");setTimeout(()=>b.classList.remove("wrong"),400)}});ops.append(b)})}
-    document.getElementById("name-form").addEventListener("submit",e=>{e.preventDefault();const input=document.getElementById("child-name");if(!input.value.trim()){document.getElementById("name-message").textContent="Tulis namamu dulu, ya!";input.focus();return}childName=input.value.trim();document.getElementById("greeting-name").textContent=childName+"!";document.getElementById("welcome-screen").classList.remove("active");document.getElementById("game-screen").classList.add("active");tone(600,.12)});
-    document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{show(b.dataset.open);if(b.dataset.open==="quiz-view"){quizIndex=0;document.getElementById("quiz-finish").classList.add("is-hidden");renderQuiz()}}));
-    document.querySelectorAll(".back-menu").forEach(b=>b.addEventListener("click",()=>show("menu-view")));document.getElementById("home-button").addEventListener("click",()=>show("menu-view"));document.getElementById("change-name").addEventListener("click",()=>{document.getElementById("game-screen").classList.remove("active");document.getElementById("welcome-screen").classList.add("active");document.getElementById("child-name").value=childName});
-    document.getElementById("sound-button").addEventListener("click",()=>{soundOn=!soundOn;document.getElementById("sound-icon").setAttribute("data-lucide",soundOn?"volume-2":"volume-x");lucide.createIcons();if(soundOn)tone()});
-    document.querySelectorAll("[data-animal]").forEach(b=>b.addEventListener("click",()=>{animal=b.dataset.animal;updateAnimal();tone(animals[animal].tone,.1)}));document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;document.querySelectorAll(".tab-btn").forEach(x=>x.classList.remove("active"));b.classList.add("active");updateAnimal()}));document.getElementById("animal-sound").addEventListener("click",()=>tone(animals[animal].tone,.35,"triangle"));
-    document.getElementById("quiz-restart").addEventListener("click",()=>{quizIndex=0;document.getElementById("quiz-finish").classList.add("is-hidden");renderQuiz()});
-    document.querySelectorAll("[data-game]").forEach(b=>b.addEventListener("click",()=>{game=b.dataset.game;document.getElementById("selected-game-name").textContent=game==="decomp"?"Game Dekomposisi":"Game Pola Gambar";show("levels-view")}));document.querySelectorAll("[data-level]").forEach(b=>b.addEventListener("click",()=>{level=b.dataset.level;if(game==="decomp"){show("decomp-view");renderDecomp()}else{show("pattern-view");renderPattern()}}));document.getElementById("back-levels").addEventListener("click",()=>show("games-view"));document.getElementById("back-decomp").addEventListener("click",()=>show("levels-view"));document.getElementById("back-pattern").addEventListener("click",()=>show("levels-view"));
-    updateAnimal();lucide.createIcons();
+
+    let currentKuisIndex = 0;
+
+    function startKuis() {
+      currentKuisIndex = 0;
+      document.getElementById('kuis-body').classList.remove('hidden');
+      document.getElementById('kuis-selesai').classList.add('hidden');
+      renderKuisSoal();
+    }
+
+    function renderKuisSoal() {
+      const q = kuisData[currentKuisIndex];
+      document.getElementById('kuis-progress').innerText = `Soal ${currentKuisIndex + 1} / ${kuisData.length}`;
+      document.getElementById('kuis-pertanyaan').innerText = q.pertanyaan;
+
+      const opsiContainer = document.getElementById('kuis-opsi');
+      opsiContainer.innerHTML = "";
+
+      q.opsi.forEach((item) => {
+        const btn = document.createElement('button');
+        btn.className = "btn-3d btn-3d-purple p-4 rounded-2xl flex flex-col items-center justify-center gap-2 text-center";
+        btn.innerHTML = `<span class="text-5xl">${item.emoji}</span><span class="font-bold text-base">${item.teks}</span>`;
+        btn.onclick = () => checkKuisAnswer(item.benar);
+        opsiContainer.appendChild(btn);
+      });
+    }
+
+    function checkKuisAnswer(isCorrect) {
+      if (isCorrect) {
+        playSound('correct');
+        alert("🎉 Hore! Jawabanmu Benar!");
+        currentKuisIndex++;
+        if (currentKuisIndex < kuisData.length) {
+          renderKuisSoal();
+        } else {
+          document.getElementById('kuis-body').classList.add('hidden');
+          document.getElementById('kuis-selesai').classList.remove('hidden');
+        }
+      } else {
+        playSound('wrong');
+        alert("❌ Ups, Coba lagi ya!");
+      }
+    }
+
+    // ================= GAMES LEVEL SELECTION LOGIC =================
+    function showLevelSelect(gameType) {
+      playSound('click');
+      currentSelectedGame = gameType;
+
+      const titleEl = document.getElementById('level-select-title');
+      const descM = document.getElementById('level-desc-mudah');
+      const descS = document.getElementById('level-desc-sedang');
+      const descH = document.getElementById('level-desc-sulit');
+
+      if (gameType === 'dekomposisi') {
+        titleEl.innerText = "Level Game Dekomposisi";
+        descM.innerText = "2 Bagian Tubuh Sapi";
+        descS.innerText = "3 Bagian Tubuh Sapi";
+        descH.innerText = "Semua Bagian Tubuh Sapi";
+      } else {
+        titleEl.innerText = "Level Game Pola Gambar";
+        descM.innerText = "Pola 2 Gambar (A-B)";
+        descS.innerText = "Pola 3 Gambar (A-B-C)";
+        descH.innerText = "Pola 4 Gambar / Variasi";
+      }
+
+      navigateTo('page-level-select');
+    }
+
+    function launchGame(level) {
+      playSound('click');
+      currentLevel = level;
+
+      if (currentSelectedGame === 'dekomposisi') {
+        navigateTo('page-game-dekomposisi');
+        initDekomposisiGame();
+      } else {
+        navigateTo('page-game-pola');
+        initPolaGame();
+      }
+    }
+
+    // ================= GAME DEKOMPOSISI LOGIC =================
+    const dekomposisiParts = [
+      { id: 'kepala', label: 'Kepala', top: '25%', left: '20%' },
+      { id: 'kaki', label: 'Kaki', top: '75%', left: '45%' },
+      { id: 'badan', label: 'Badan', top: '50%', left: '50%' },
+      { id: 'ekor', label: 'Ekor', top: '55%', left: '80%' },
+      { id: 'telinga', label: 'Telinga', top: '15%', left: '35%' },
+      { id: 'mata', label: 'Mata', top: '28%', left: '10%' }
+    ];
+
+    let activeParts = [];
+
+    function initDekomposisiGame() {
+      document.getElementById('dekomposisi-level-badge').innerText = `Level: ${currentLevel.toUpperCase()}`;
+
+      if (currentLevel === 'mudah') {
+        activeParts = dekomposisiParts.slice(0, 2);
+      } else if (currentLevel === 'sedang') {
+        activeParts = dekomposisiParts.slice(0, 3);
+      } else {
+        activeParts = [...dekomposisiParts];
+      }
+
+      resetDekomposisi();
+    }
+
+    function resetDekomposisi() {
+      selectedLabelForMobile = null;
+      const targetsContainer = document.getElementById('drop-targets-container');
+      const labelsContainer = document.getElementById('dekomposisi-labels');
+
+      targetsContainer.innerHTML = "";
+      labelsContainer.innerHTML = "";
+
+      // Render Drop Targets over the SVG Image
+      activeParts.forEach(part => {
+        const target = document.createElement('div');
+        target.className = "drop-zone pointer-events-auto absolute transform -translate-x-1/2 -translate-y-1/2 px-2 py-1 rounded-xl text-xs font-black shadow-sm flex items-center justify-center min-w-[60px] min-h-[32px]";
+        target.style.top = part.top;
+        target.style.left = part.left;
+        target.dataset.partId = part.id;
+        target.innerText = "???";
+
+        // Drag events
+        target.ondragover = (e) => { e.preventDefault(); target.classList.add('hovered'); };
+        target.ondragleave = () => target.classList.remove('hovered');
+        target.ondrop = (e) => handleDrop(e, part.id);
+
+        // Mobile tap selection
+        target.onclick = () => handleTargetTap(part.id, target);
+
+        targetsContainer.appendChild(target);
+      });
+
+      // Render Draggable Labels
+      const shuffled = [...activeParts].sort(() => Math.random() - 0.5);
+      shuffled.forEach(part => {
+        const labelBtn = document.createElement('div');
+        labelBtn.className = "btn-3d btn-3d-green p-2 rounded-xl text-center text-xs font-black cursor-grab active:cursor-grabbing select-none";
+        labelBtn.innerText = part.label;
+        labelBtn.draggable = true;
+        labelBtn.id = `label-${part.id}`;
+
+        labelBtn.ondragstart = (e) => {
+          e.dataTransfer.setData("text/plain", part.id);
+        };
+
+        labelBtn.onclick = () => {
+          playSound('click');
+          // Deselect previous
+          document.querySelectorAll('#dekomposisi-labels div').forEach(el => el.classList.remove('ring-4', 'ring-yellow-400'));
+          selectedLabelForMobile = part.id;
+          labelBtn.classList.add('ring-4', 'ring-yellow-400');
+        };
+
+        labelsContainer.appendChild(labelBtn);
+      });
+    }
+
+    function handleDrop(e, targetId) {
+      e.preventDefault();
+      const draggedPartId = e.dataTransfer.getData("text/plain");
+      verifyPartPlacement(draggedPartId, targetId);
+    }
+
+    function handleTargetTap(targetId, targetEl) {
+      if (selectedLabelForMobile) {
+        verifyPartPlacement(selectedLabelForMobile, targetId);
+        selectedLabelForMobile = null;
+      }
+    }
+
+    function verifyPartPlacement(partId, targetId) {
+      if (partId === targetId) {
+        playSound('correct');
+        const part = activeParts.find(p => p.id === partId);
+        const targetEl = document.querySelector(`.drop-zone[data-part-id="${targetId}"]`);
+        
+        targetEl.innerText = part.label;
+        targetEl.classList.add('filled');
+        targetEl.classList.remove('hovered');
+
+        const labelEl = document.getElementById(`label-${partId}`);
+        if (labelEl) labelEl.style.display = 'none';
+
+        // Check Win
+        checkDekomposisiWin();
+      } else {
+        playSound('wrong');
+      }
+    }
+
+    function checkDekomposisiWin() {
+      const filledZones = document.querySelectorAll('.drop-zone.filled');
+      if (filledZones.length === activeParts.length) {
+        setTimeout(() => {
+          playSound('correct');
+          alert("🎉 HORE! Kamu berhasil menyebutkan semua bagian tubuh Sapi!");
+        }, 300);
+      }
+    }
+
+    // ================= GAME POLA GAMBAR LOGIC =================
+    const animalHeads = [
+      { id: 'sapi', emoji: '🐮', nama: 'Sapi' },
+      { id: 'kucing', emoji: '🐱', nama: 'Kucing' },
+      { id: 'kuda', emoji: '🐴', nama: 'Kuda' },
+      { id: 'kambing', emoji: '🐐', nama: 'Kambing' }
+    ];
+
+    let currentPolaTarget = null;
+    let polaScore = 0;
+
+    function initPolaGame() {
+      document.getElementById('pola-level-badge').innerText = `Level: ${currentLevel.toUpperCase()}`;
+      generatePolaQuestion();
+    }
+
+    function generatePolaQuestion() {
+      const seqContainer = document.getElementById('pola-sequence-container');
+      const optContainer = document.getElementById('pola-options-container');
+      seqContainer.innerHTML = "";
+      optContainer.innerHTML = "";
+
+      let sequence = [];
+      let answer = null;
+
+      if (currentLevel === 'mudah') {
+        // Pola A-B-A-B (2 gambar berulang)
+        const h1 = animalHeads[0];
+        const h2 = animalHeads[1];
+        sequence = [h1, h2, h1, h2, h1];
+        answer = h2;
+      } else if (currentLevel === 'sedang') {
+        // Pola A-B-C-A-B-C (3 gambar berulang)
+        const h1 = animalHeads[0];
+        const h2 = animalHeads[1];
+        const h3 = animalHeads[2];
+        sequence = [h1, h2, h3, h1, h2];
+        answer = h3;
+      } else {
+        // Pola A-A-B-B (4 gambar / Variasi)
+        const h1 = animalHeads[0];
+        const h2 = animalHeads[2];
+        sequence = [h1, h1, h2, h2, h1];
+        answer = h1;
+      }
+
+      currentPolaTarget = answer.id;
+
+      // Render Sequence Cards
+      sequence.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "game-card p-3 sm:p-4 text-3xl sm:text-4xl bg-white border-2 border-yellow-300 flex items-center justify-center animate-bounce-gentle";
+        card.innerText = item.emoji;
+        seqContainer.appendChild(card);
+      });
+
+      // Card Tanda Tanya (Kotak Kosong)
+      const emptyCard = document.createElement('div');
+      emptyCard.className = "game-card p-3 sm:p-4 text-3xl sm:text-4xl bg-yellow-200 border-4 border-dashed border-yellow-500 flex items-center justify-center font-black text-yellow-700 animate-pulse";
+      emptyCard.innerText = "❓";
+      seqContainer.appendChild(emptyCard);
+
+      // Render Option Cards
+      const options = [...animalHeads].sort(() => Math.random() - 0.5);
+      options.forEach(opt => {
+        const optBtn = document.createElement('button');
+        optBtn.className = "btn-3d btn-3d-yellow game-card p-4 text-4xl sm:text-5xl hover:scale-105 transition flex items-center justify-center";
+        optBtn.innerText = opt.emoji;
+        optBtn.onclick = () => checkPolaAnswer(opt.id);
+        optContainer.appendChild(optBtn);
+      });
+    }
+
+    function checkPolaAnswer(selectedId) {
+      if (selectedId === currentPolaTarget) {
+        playSound('correct');
+        polaScore += 10;
+        document.getElementById('pola-score').innerText = polaScore;
+        alert("🎉 Hore! Polanya Benar!");
+        generatePolaQuestion();
+      } else {
+        playSound('wrong');
+        alert("❌ Ups, Polanya belum tepat. Coba lagi ya!");
+      }
+    }
   </script>
- 
-</body></html>
+</body>
+</html>
