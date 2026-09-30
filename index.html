@@ -1,233 +1,298 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
- <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260930-05-8966983","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GACLOAN — Games Ceria Logika Anak</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;600;700;800&amp;family=Baloo+2:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+  <title>Dashboard & Layanan Profesional</title>
   <style>
-    :root{--ink:#31526a;--sky:#9eddf4;--cream:#fff9df;--mint:#bdeed0;--yellow:#ffd95a;--pink:#ffadc2;--blue:#57aee6;--coral:#ff9388;--green:#91dfa5}
-    *{box-sizing:border-box} body{margin:0;width:100%;color:var(--ink);font-family:"Alegreya Sans",sans-serif}
-    .app-shell{width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));overflow:hidden;position:relative;background:linear-gradient(180deg,#9eddf4 0%,#e7f8ff 53%,#d2f2c6 53%,#c6eeb8 100%)}
-    .app-shell:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background-image:radial-gradient(#fff 1.5px,transparent 1.5px);background-size:22px 22px}
-    .screen{position:relative;z-index:1;display:none;width:100%;min-height:calc(100 * min(var(--vh,1vh),1vh));padding:22px}.screen.active{display:flex;animation:rise .35s ease both}
-    .view{animation:rise .3s ease both}.is-hidden{display:none!important}.content-wrap{width:100%;max-width:1060px;margin:auto}.title-font{font-family:"Baloo 2",cursive}
-    .cloud{position:absolute;color:#fff;font-size:3rem;opacity:.86;filter:drop-shadow(0 4px 0 rgba(49,82,106,.08))}.cloud.a{top:2%;left:5%}.cloud.b{top:12%;right:6%;font-size:2.25rem}.cloud.c{bottom:9%;right:4%;font-size:2.4rem}
-    .card{border:4px solid rgba(255,255,255,.94);border-radius:27px;box-shadow:0 8px 0 rgba(49,82,106,.16),0 17px 27px rgba(53,107,127,.13)}
-    .button-3d{border:0;border-bottom:7px solid rgba(42,82,91,.29);border-radius:17px;box-shadow:0 5px 0 rgba(49,82,106,.08);cursor:pointer;transition:.15s;min-height:52px}
-    .button-3d:hover,.menu-card:hover,.animal-card:hover,.answer-card:hover{transform:translateY(-4px)}.button-3d:active,.menu-card:active,.animal-card:active,.answer-card:active{transform:translateY(4px);border-bottom-width:2px;box-shadow:none}
-    button:focus-visible,.drop-zone:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
-    .menu-card,.animal-card,.answer-card{border:4px solid white;border-radius:25px;box-shadow:0 8px 0 rgba(49,82,106,.17),0 14px 22px rgba(49,82,106,.11);cursor:pointer;transition:.15s}
-    .headerbar{background:rgba(255,255,255,.86);border:3px solid white;border-radius:21px;box-shadow:0 6px 0 rgba(49,82,106,.12);backdrop-filter:blur(8px)}
-    .animal-face{font-size:4rem;line-height:1;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 5px 0 rgba(49,82,106,.1))}
-    .tab-btn.active{background:#57aee6!important;color:white!important;border-bottom-color:#2876a7!important}.correct{background:#aeecc2!important;border-color:#399665!important}.wrong{background:#ffc2c8!important;border-color:#e26e7b!important}
-    .cow-stage{height:236px;position:relative;overflow:hidden}.cow-stage img{position:absolute;width:34%;height:100%;object-fit:contain;left:33%;top:0;padding:6px}.drop-zone{position:absolute;width:29%;min-height:34px;padding:4px 6px;border:2px dashed #4e9cca;border-radius:12px;background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;font-weight:800;z-index:3}.drop-zone.over{background:#fff5a9;transform:scale(1.03)}
-    .part-marker{position:absolute;width:11px;height:11px;background:#ff8d79;border:3px solid white;border-radius:99px;box-shadow:0 0 0 2px var(--ink);z-index:2}.pointer-line{position:absolute;height:2px;background:var(--ink);transform-origin:left;z-index:1}
-    .label-chip.selected{outline:4px solid #57aee6;transform:translateY(-2px)}.label-chip.used{opacity:.3;pointer-events:none}
-    .confetti{position:fixed;top:-20px;z-index:50;width:11px;height:11px;border-radius:3px;animation:fall 1.8s linear forwards;pointer-events:none}
-    @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes float{50%{transform:translateY(-8px) rotate(2deg)}}@keyframes fall{to{transform:translate(var(--x),calc(100 * min(var(--vh,1vh),1vh) + 30px)) rotate(720deg);opacity:0}}
-    @media(max-width:640px){.screen{padding:14px}.animal-face{font-size:3rem}.cow-stage{height:245px}.cow-stage img{width:40%;left:30%}.drop-zone{width:31%;font-size:9px}.card{border-radius:22px}}
+    /* Reset & Base Styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    /* Grid Layouts */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    /* Shared Card Base Style */
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Stat Card Component */
+    .stat-card {
+      padding: 24px;
+    }
+
+    .stat-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .stat-badge {
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* Profile Card Component */
+    .profile-card {
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .profile-banner {
+      height: 100px;
+      background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    }
+
+    .profile-content {
+      padding: 0 24px 28px 24px;
+      margin-top: -50px;
+    }
+
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #2563eb;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      border: 4px solid #ffffff;
+      margin: 0 auto 16px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .profile-role {
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 4px 0 16px 0;
+    }
+
+    .status-badge {
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .btn-action {
+      width: 100%;
+      margin-top: 24px;
+      padding: 12px;
+      background: #0f172a;
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-action:hover {
+      background: #1e293b;
+    }
+
+    /* Service Card Component */
+    .service-card {
+      padding: 28px;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: #eff6ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .service-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .service-link:hover {
+      text-decoration: underline;
+    }
   </style>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
-  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
-  <script src="/_sdk/6e4b845d05dd79e4.editing_sdk.js" type="text/javascript" integrity="sha512-nfDAoBO2Sn6o6rLYgdnzgUs0nZfi4v1NV7M2ioocHZ6oj+ZnIEUmJGLGqFu2dnCue3Bjs5kWMae4qsFt05LfIA=="></script>
-  <script src="/_sdk/ddcab3e45959c817.resizing_sdk.js" type="text/javascript" integrity="sha512-VAviUKfZVzugWBSeULYjSljTX+nb84wc6Zzbx5GQaQgh6X2ISSjXi8eIiCDGdwDh10esJMY0+QFQgUy9NcrTlQ=="></script>
- </head>
- <body data-template-id="__page-root">
-  <div class="app-shell">
-   <span class="cloud a" aria-hidden="true">☁</span><span class="cloud b" aria-hidden="true">☁</span><span class="cloud c" aria-hidden="true">☁</span>
-   <section id="welcome-screen" class="screen active items-center justify-center" aria-labelledby="welcome-title">
-    <main class="content-wrap max-w-3xl">
-     <div class="card bg-[#fff9df] p-6 text-center md:p-10">
-      <div class="mb-4 flex justify-center gap-2" aria-hidden="true"><span class="animal-face">🐮</span><span class="animal-face" style="animation-delay:.25s">🐐</span><span class="animal-face" style="animation-delay:.5s">🐱</span><span class="animal-face" style="animation-delay:.75s">🐴</span>
-      </div>
-      <p data-template-id="welcome-kicker" class="canva-text title-font font-bold tracking-wide"></p>
-      <h1 id="welcome-title" data-template-id="welcome-title" class="canva-text title-font font-extrabold leading-tight"></h1>
-      <p data-template-id="welcome-intro" class="canva-text mt-3 font-semibold"></p>
-      <form id="name-form" class="mx-auto mt-7 max-w-lg text-left">
-       <label data-template-id="name-label" class="canva-text mb-2 block font-extrabold" for="child-name"></label> <input id="child-name" class="w-full rounded-2xl border-4 border-white bg-white px-5 py-4 text-xl font-bold text-[#31526a] shadow-inner outline-none focus:ring-4 focus:ring-[#ffd95a]" maxlength="24" autocomplete="name">
-       <p id="name-message" class="mt-2 h-5 font-bold text-[#db536b]" aria-live="polite"></p><button data-template-id="start-button" class="canva-button button-3d mt-4 w-full bg-[#ffd95a] px-5 py-3 title-font font-extrabold" type="submit"></button>
-      </form>
-     </div>
-    </main>
-   </section>
-   <section id="game-screen" class="screen flex-col gap-5" aria-label="Aplikasi permainan">
-    <header class="headerbar mx-auto flex w-full max-w-[1060px] items-center justify-between gap-3 px-4 py-3">
-     <button id="home-button" data-template-id="home-button" class="canva-button button-3d flex items-center gap-2 bg-[#b9ebc6] px-4 py-2 font-extrabold" type="button"><i data-lucide="home"></i><span data-template-id="home-text" class="canva-text"></span></button>
-     <p class="title-font text-center text-xl font-extrabold md:text-2xl"><span data-template-id="hello-prefix" class="canva-text"></span> <span id="greeting-name"></span></p><button id="sound-button" data-template-id="sound-button" class="canva-button button-3d bg-[#ffadc2] p-3" type="button" aria-label="Nyalakan atau matikan suara"><i id="sound-icon" data-lucide="volume-2"></i></button>
-    </header>
-    <main class="content-wrap flex-1">
-     <section id="menu-view" class="view" aria-labelledby="menu-title">
-      <div class="mb-6 text-center">
-       <p data-template-id="menu-kicker" class="canva-text title-font font-bold"></p>
-       <h1 id="menu-title" data-template-id="menu-title" class="canva-text title-font font-extrabold"></h1>
-       <p data-template-id="menu-subtitle" class="canva-text font-semibold"></p>
-      </div>
-      <div class="grid gap-5 sm:grid-cols-2">
-       <button data-template-id="menu-goals" class="canva-card menu-card bg-[#fff1a6] p-6 text-left" data-open="goals-view" type="button"><span class="mb-2 block text-5xl">🎯</span><span data-template-id="menu-goals-title" class="canva-text title-font block font-extrabold"></span><span data-template-id="menu-goals-desc" class="canva-text mt-1 block font-semibold"></span></button> <button data-template-id="menu-learn" class="canva-card menu-card bg-[#bdeed0] p-6 text-left" data-open="learn-view" type="button"><span class="mb-2 block text-5xl">📚</span><span data-template-id="menu-learn-title" class="canva-text title-font block font-extrabold"></span><span data-template-id="menu-learn-desc" class="canva-text mt-1 block font-semibold"></span></button> <button data-template-id="menu-quiz" class="canva-card menu-card bg-[#c7eafa] p-6 text-left" data-open="quiz-view" type="button"><span class="mb-2 block text-5xl">🏆</span><span data-template-id="menu-quiz-title" class="canva-text title-font block font-extrabold"></span><span data-template-id="menu-quiz-desc" class="canva-text mt-1 block font-semibold"></span></button> <button data-template-id="menu-games" class="canva-card menu-card bg-[#ffd0dc] p-6 text-left" data-open="games-view" type="button"><span class="mb-2 block text-5xl">🎮</span><span data-template-id="menu-games-title" class="canva-text title-font block font-extrabold"></span><span data-template-id="menu-games-desc" class="canva-text mt-1 block font-semibold"></span></button>
-      </div>
-      <div class="mt-7 text-center"><button id="change-name" data-template-id="change-name" class="canva-button button-3d bg-[#ffadc2] px-7 py-3 font-extrabold" type="button"></button>
-      </div>
-     </section>
-     <section id="goals-view" class="view is-hidden" aria-labelledby="goals-title">
-      <div class="card bg-[#fff9df] p-6 md:p-8">
-       <h1 id="goals-title" data-template-id="goals-title" class="canva-text title-font text-center font-extrabold"></h1>
-       <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <article data-template-id="goal-one" class="canva-card flex items-center gap-4 bg-[#c7eafa] p-5"><span class="text-4xl">🐾</span>
-         <p data-template-id="goal-one-text" class="canva-text font-bold"></p>
-        </article>
-        <article data-template-id="goal-two" class="canva-card flex items-center gap-4 bg-[#bdeed0] p-5"><span class="text-4xl">🏡</span>
-         <p data-template-id="goal-two-text" class="canva-text font-bold"></p>
-        </article>
-        <article data-template-id="goal-three" class="canva-card flex items-center gap-4 bg-[#fff1a6] p-5"><span class="text-4xl">💛</span>
-         <p data-template-id="goal-three-text" class="canva-text font-bold"></p>
-        </article>
-        <article data-template-id="goal-four" class="canva-card flex items-center gap-4 bg-[#ffd0dc] p-5"><span class="text-4xl">🧩</span>
-         <p data-template-id="goal-four-text" class="canva-text font-bold"></p>
-        </article>
-       </div>
-       <div class="mt-7 text-center"><button data-template-id="back-goals" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button"></button>
-       </div>
-      </div>
-     </section>
-     <section id="learn-view" class="view is-hidden" aria-labelledby="learn-title">
-      <div class="mb-5 text-center">
-       <h1 id="learn-title" data-template-id="learn-title" class="canva-text title-font font-extrabold"></h1>
-       <p data-template-id="learn-subtitle" class="canva-text font-semibold"></p>
-      </div>
-      <div class="mb-5 grid grid-cols-2 gap-3 md:grid-cols-5">
-       <button class="animal-card bg-[#fff1a6] p-3" data-animal="cow" type="button"><img data-template-id="cow-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy"><span data-template-id="cow-name" class="canva-text title-font mt-1 block font-extrabold"></span></button> <button class="animal-card bg-[#bdeed0] p-3" data-animal="goat" type="button"><img data-template-id="goat-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy"><span data-template-id="goat-name" class="canva-text title-font mt-1 block font-extrabold"></span></button> <button class="animal-card bg-[#ffd0dc] p-3" data-animal="cat" type="button"><img data-template-id="cat-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy"><span data-template-id="cat-name" class="canva-text title-font mt-1 block font-extrabold"></span></button> <button class="animal-card bg-[#c7eafa] p-3" data-animal="horse" type="button"><img data-template-id="horse-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy"><span data-template-id="horse-name" class="canva-text title-font mt-1 block font-extrabold"></span></button> <button class="animal-card bg-[#e4d4fa] p-3" data-animal="dog" type="button"><img data-template-id="dog-image" class="canva-image h-20 w-full rounded-xl object-cover" loading="lazy"><span data-template-id="dog-name" class="canva-text title-font mt-1 block font-extrabold"></span></button>
-      </div>
-      <article class="card bg-white p-5 md:p-7">
-       <div class="flex items-center gap-4"><span id="animal-emoji" class="text-6xl">🐮</span>
-        <div>
-         <h2 id="animal-heading" class="title-font text-3xl font-extrabold"></h2>
-         <p id="animal-tagline" class="font-bold"></p>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Bagian 1: Ringkasan Statistik -->
+    <h2 class="section-title">Ringkasan Performa</h2>
+    <div class="stats-grid">
+      
+      <div class="card stat-card">
+        <div class="stat-header">
+          <span class="stat-label">TOTAL PENDAPATAN</span>
+          <div class="stat-icon" style="background: #e0f2fe; color: #0284c7;">📈</div>
         </div>
-       </div>
-       <div class="mt-5 grid grid-cols-2 gap-2 md:grid-cols-4"><button data-template-id="tab-about" class="canva-button button-3d tab-btn active bg-[#fff1a6] p-2 font-bold" data-tab="about" type="button"></button><button data-template-id="tab-home" class="canva-button button-3d tab-btn bg-[#bdeed0] p-2 font-bold" data-tab="home" type="button"></button><button data-template-id="tab-benefit" class="canva-button button-3d tab-btn bg-[#c7eafa] p-2 font-bold" data-tab="benefit" type="button"></button><button data-template-id="tab-fact" class="canva-button button-3d tab-btn bg-[#ffd0dc] p-2 font-bold" data-tab="fact" type="button"></button>
-       </div>
-       <p id="animal-detail" class="mt-5 rounded-2xl bg-[#f5fbff] p-5 text-lg font-semibold"></p><button id="animal-sound" data-template-id="animal-sound" class="canva-button button-3d mt-4 bg-[#ffadc2] px-5 py-2 font-extrabold" type="button"></button>
-      </article>
-      <div class="mt-7 text-center"><button data-template-id="back-learn" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button"></button>
+        <div class="stat-value">Rp 45.250.000</div>
+        <span class="stat-badge" style="color: #16a34a;">+12.5% dibanding bulan lalu</span>
       </div>
-     </section>
-     <section id="quiz-view" class="view is-hidden" aria-labelledby="quiz-title">
-      <div class="card mx-auto max-w-3xl bg-[#fff9df] p-6 md:p-8">
-       <div class="flex items-center justify-between gap-3">
-        <h1 id="quiz-title" data-template-id="quiz-title" class="canva-text title-font font-extrabold"></h1><span id="quiz-progress" class="rounded-full bg-[#c7eafa] px-4 py-2 font-extrabold"></span>
-       </div>
-       <div class="mt-5 text-center">
-        <div id="quiz-emoji" class="text-7xl">
-         🐮
+
+      <div class="card stat-card">
+        <div class="stat-header">
+          <span class="stat-label">PENGGUNA AKTIF</span>
+          <div class="stat-icon" style="background: #f0fdf4; color: #16a34a;">👥</div>
         </div>
-        <h2 id="quiz-question" class="title-font mt-3 text-2xl font-extrabold md:text-3xl"></h2>
-       </div>
-       <div id="quiz-options" class="mt-6 grid grid-cols-2 gap-3"></div>
-       <p id="quiz-feedback" class="mt-5 min-h-8 text-center text-xl font-extrabold" aria-live="polite"></p>
-       <div id="quiz-finish" class="is-hidden mt-4 text-center">
-        <p data-template-id="quiz-finish-text" class="canva-text title-font text-2xl font-extrabold"></p><button id="quiz-restart" data-template-id="quiz-restart" class="canva-button button-3d mt-3 bg-[#ffd95a] px-6 py-3 font-extrabold" type="button"></button>
-       </div>
-       <div class="mt-6 text-center"><button data-template-id="back-quiz" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button"></button>
-       </div>
+        <div class="stat-value">1,248</div>
+        <span class="stat-badge" style="color: #16a34a;">+5% minggu ini</span>
       </div>
-     </section>
-     <section id="games-view" class="view is-hidden" aria-labelledby="games-title">
-      <div class="mb-6 text-center">
-       <h1 id="games-title" data-template-id="games-title" class="canva-text title-font font-extrabold"></h1>
-       <p data-template-id="games-subtitle" class="canva-text font-semibold"></p>
-      </div>
-      <div class="mx-auto grid max-w-4xl gap-6 md:grid-cols-2"><button data-template-id="decomp-card" class="canva-card menu-card bg-[#bdeed0] p-7 text-left" data-game="decomp" type="button"><span class="text-6xl">🐮</span><span data-template-id="decomp-card-title" class="canva-text title-font mt-3 block font-extrabold"></span><span data-template-id="decomp-card-desc" class="canva-text mt-2 block font-semibold"></span></button><button data-template-id="pattern-card" class="canva-card menu-card bg-[#ffd0dc] p-7 text-left" data-game="pattern" type="button"><span class="text-6xl">🐮 🐱</span><span data-template-id="pattern-card-title" class="canva-text title-font mt-3 block font-extrabold"></span><span data-template-id="pattern-card-desc" class="canva-text mt-2 block font-semibold"></span></button>
-      </div>
-      <div class="mt-7 text-center"><button data-template-id="back-games" class="canva-button button-3d back-menu bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button"></button>
-      </div>
-     </section>
-     <section id="levels-view" class="view is-hidden" aria-labelledby="levels-title">
-      <div class="card mx-auto max-w-4xl bg-[#fff9df] p-6 text-center md:p-8"><span class="text-5xl">🌟</span>
-       <h1 id="levels-title" data-template-id="levels-title" class="canva-text title-font font-extrabold"></h1>
-       <p id="selected-game-name" class="title-font text-2xl font-bold"></p>
-       <p data-template-id="levels-subtitle" class="canva-text mt-2 font-semibold"></p>
-       <div class="mt-7 grid gap-5 md:grid-cols-3"><button data-template-id="easy-level" class="canva-card button-3d bg-[#91dfa5] p-6" data-level="easy" type="button"><span class="text-5xl">🌱</span><span data-template-id="easy-level-text" class="canva-text title-font mt-2 block font-extrabold"></span></button><button data-template-id="medium-level" class="canva-card button-3d bg-[#ffd95a] p-6" data-level="medium" type="button"><span class="text-5xl">☀️</span><span data-template-id="medium-level-text" class="canva-text title-font mt-2 block font-extrabold"></span></button><button data-template-id="hard-level" class="canva-card button-3d bg-[#ff9388] p-6" data-level="hard" type="button"><span class="text-5xl">🔥</span><span data-template-id="hard-level-text" class="canva-text title-font mt-2 block font-extrabold"></span></button>
-       </div><button id="back-levels" data-template-id="back-levels" class="canva-button button-3d mt-7 bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button"></button>
-      </div>
-     </section>
-     <section id="decomp-view" class="view is-hidden" aria-labelledby="decomp-title">
-      <div class="card mx-auto max-w-5xl bg-[#fff9df] p-5 md:p-7">
-       <div class="text-center">
-        <h1 id="decomp-title" data-template-id="decomp-title" class="canva-text title-font font-extrabold"></h1>
-        <p data-template-id="decomp-instruction" class="canva-text font-bold"></p>
-       </div>
-       <div class="mx-auto mt-5 max-w-4xl">
-        <div class="cow-stage rounded-3xl border-4 border-white bg-[#bdeed0]"><img data-template-id="decomp-cow-image" class="canva-image" loading="lazy">
-         <div id="drop-targets"></div>
+
+      <div class="card stat-card">
+        <div class="stat-header">
+          <span class="stat-label">PROYEK SELESAI</span>
+          <div class="stat-icon" style="background: #faf5ff; color: #9333ea;">✅</div>
         </div>
-        <h2 data-template-id="labels-heading" class="canva-text title-font mt-5 text-center font-extrabold"></h2>
-        <div id="label-bank" class="mt-4 grid grid-cols-2 gap-3"></div>
-        <p id="decomp-feedback" class="mt-4 min-h-8 text-center text-xl font-extrabold" aria-live="polite"></p>
-       </div>
-       <div id="decomp-finish" class="is-hidden mt-4 text-center">
-        <p data-template-id="decomp-finish-text" class="canva-text title-font text-2xl font-extrabold"></p>
-       </div>
-       <div class="mt-6 text-center"><button id="back-decomp" data-template-id="back-decomp" class="canva-button button-3d bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button"></button>
-       </div>
+        <div class="stat-value">98.4%</div>
+        <span class="stat-badge" style="color: #64748b;">Target: 95%</span>
       </div>
-     </section>
-     <section id="pattern-view" class="view is-hidden" aria-labelledby="pattern-title">
-      <div class="card mx-auto max-w-4xl bg-[#fff9df] p-5 text-center md:p-8">
-       <h1 id="pattern-title" data-template-id="pattern-title" class="canva-text title-font font-extrabold"></h1>
-       <p data-template-id="pattern-instruction" class="canva-text font-bold"></p>
-       <div id="pattern-sequence" class="mt-7 flex flex-wrap justify-center gap-3"></div>
-       <h2 data-template-id="pattern-question" class="canva-text title-font mt-7 font-extrabold"></h2>
-       <div id="pattern-options" class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4"></div>
-       <p id="pattern-feedback" class="mt-5 min-h-8 text-xl font-extrabold" aria-live="polite"></p>
-       <div id="pattern-finish" class="is-hidden">
-        <p data-template-id="pattern-finish-text" class="canva-text title-font text-2xl font-extrabold"></p>
-       </div>
-       <div class="mt-6"><button id="back-pattern" data-template-id="back-pattern" class="canva-button button-3d bg-[#57aee6] px-7 py-3 font-extrabold text-white" type="button"></button>
-       </div>
+
+    </div>
+
+    <!-- Bagian 2: Profil & Layanan -->
+    <h2 class="section-title">Tim & Layanan Utama</h2>
+    <div class="main-grid">
+      
+      <!-- Kartu Profil -->
+      <div class="card profile-card">
+        <div class="profile-banner"></div>
+        <div class="profile-content">
+          <div class="profile-avatar">AD</div>
+          <h3 class="profile-name">Ahmad Dahlan</h3>
+          <p class="profile-role">Senior Project Manager</p>
+          <span class="status-badge">Aktif • On Duty</span>
+          <button class="btn-action">Lihat Profil Lengkap</button>
+        </div>
       </div>
-     </section>
-    </main>
-   </section>
+
+      <!-- Kartu Layanan 1 -->
+      <div class="card service-card">
+        <div class="service-icon">🚀</div>
+        <h3 class="service-title">Pengembangan Software</h3>
+        <p class="service-desc">Solusi perangkat lunak kustom yang dirancang khusus untuk meningkatkan efisiensi operasional bisnis Anda secara maksimal.</p>
+        <a href="#" class="service-link">Pelajari Selengkapnya &rarr;</a>
+      </div>
+
+      <!-- Kartu Layanan 2 -->
+      <div class="card service-card">
+        <div class="service-icon">🎨</div>
+        <h3 class="service-title">Desain UI/UX Modern</h3>
+        <p class="service-desc">Perancangan antarmuka aplikasi yang intuitif, estetis, dan memberikan pengalaman pengguna yang responsif di berbagai perangkat.</p>
+        <a href="#" class="service-link">Pelajari Selengkapnya &rarr;</a>
+      </div>
+
+    </div>
+
   </div>
-  <script>
-    let childName="", soundOn=true, animal="cow", tab="about", game="", level="easy", selectedLabel=null, quizIndex=0;
-    const animals={
-      cow:{emoji:"🐮",name:"Sapi",tag:"Sahabat peternak yang suka rumput.",about:"Sapi adalah hewan berkaki empat dan menyusui anaknya.",home:"Sapi biasanya tinggal di kandang atau padang rumput.",benefit:"Sapi dapat menghasilkan susu dan membantu memenuhi kebutuhan manusia.",fact:"Sapi suka makan rumput dan jerami. Suaranya “Mooo!”",tone:170},
-      goat:{emoji:"🐐",name:"Kambing",tag:"Lincah dan suka melompat.",about:"Kambing adalah hewan berkaki empat yang berbulu.",home:"Kambing tinggal di kandang yang bersih atau padang rumput.",benefit:"Kambing dapat menghasilkan susu dan daging.",fact:"Kambing suka rumput serta daun. Suaranya “Mbeeek!”",tone:250},
-      cat:{emoji:"🐱",name:"Kucing",tag:"Hewan peliharaan yang lembut.",about:"Kucing adalah hewan berkaki empat yang sering dipelihara.",home:"Kucing tinggal bersama keluarga di rumah yang aman.",benefit:"Kucing menjadi teman bermain dan membantu mengusir tikus.",fact:"Kucing suka makan ikan. Suaranya “Meong!”",tone:420},
-      horse:{emoji:"🐴",name:"Kuda",tag:"Kuat, cepat, dan gagah.",about:"Kuda adalah hewan berkaki empat yang dapat berlari cepat.",home:"Kuda tinggal di kandang atau padang rumput.",benefit:"Kuda dapat membantu manusia membawa barang.",fact:"Kuda makan rumput dan jerami. Suaranya “Hiiiih!”",tone:210},
-      dog:{emoji:"🐶",name:"Anjing",tag:"Penjaga rumah yang setia.",about:"Anjing adalah hewan berkaki empat yang setia.",home:"Anjing dapat tinggal di rumah atau kandang kecil.",benefit:"Anjing dapat menjaga rumah dan menjadi teman bermain.",fact:"Suara anjing adalah “Guk guk!”",tone:330}
-    };
-    const questions=[
-      ["🐮","Hewan manakah yang menghasilkan susu?",["🐱 Kucing","🐮 Sapi","🐴 Kuda","🐶 Anjing"],1],
-      ["🐮","Di mana sapi biasanya tinggal?",["🏠 Kandang","🌊 Laut","☁ Awan","🏙 Kota"],0],
-      ["🐱","Hewan manakah yang berbunyi “Meong”?",["🐐 Kambing","🐴 Kuda","🐱 Kucing","🐮 Sapi"],2],
-      ["🐶","Siapa yang dapat menjaga rumah?",["🐶 Anjing","🐮 Sapi","🐴 Kuda","🐐 Kambing"],0],
-      ["🐴","Makanan yang disukai kuda adalah ...",["🍭 Permen","🌿 Rumput","🍕 Pizza","🧊 Es"],1]
-    ];
-    function tone(freq=440,duration=.13,type="sine"){if(!soundOn)return;const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C(),o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(.08,c.currentTime);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+duration);o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+duration)}
-    function success(){tone(523,.1);setTimeout(()=>tone(659,.1),120);setTimeout(()=>tone(784,.18),240)}
-    function celebrate(){["#ffd95a","#ff9388","#57aee6","#91dfa5","#ffadc2"].forEach((color,i)=>{for(let n=0;n<6;n++){const e=document.createElement("i");e.className="confetti";e.style.left=Math.random()*100+"%";e.style.background=color;e.style.setProperty("--x",(Math.random()*220-110)+"px");e.style.animationDelay=Math.random()*.3+"s";document.body.append(e);setTimeout(()=>e.remove(),2200)}})}
-    function show(id){document.querySelectorAll(".view").forEach(v=>v.classList.add("is-hidden"));document.getElementById(id).classList.remove("is-hidden");window.scrollTo({top:0,behavior:"smooth"})}
-    function updateAnimal(){const a=animals[animal];document.getElementById("animal-emoji").textContent=a.emoji;document.getElementById("animal-heading").textContent=a.name;document.getElementById("animal-tagline").textContent=a.tag;document.getElementById("animal-detail").textContent=a[tab]}
-    function renderQuiz(){const q=questions[quizIndex], box=document.getElementById("quiz-options");document.getElementById("quiz-progress").textContent=(quizIndex+1)+" / "+questions.length;document.getElementById("quiz-emoji").textContent=q[0];document.getElementById("quiz-question").textContent=q[1];document.getElementById("quiz-feedback").textContent="";box.replaceChildren();q[2].forEach((text,index)=>{const b=document.createElement("button");b.type="button";b.className="answer-card bg-white p-4 text-lg font-extrabold";b.textContent=text;b.addEventListener("click",()=>answerQuiz(index,b));box.append(b)})}
-    function answerQuiz(index,button){const q=questions[quizIndex],msg=document.getElementById("quiz-feedback");if(index===q[3]){button.classList.add("correct");msg.textContent="Hebat! Jawabanmu benar! ⭐";msg.style.color="#26925c";success();setTimeout(()=>{quizIndex++;if(quizIndex<questions.length)renderQuiz();else{document.getElementById("quiz-options").replaceChildren();document.getElementById("quiz-question").textContent="Kuis selesai!";document.getElementById("quiz-emoji").textContent="🏆";document.getElementById("quiz-progress").textContent="Selesai";document.getElementById("quiz-finish").classList.remove("is-hidden");celebrate()}},700)}else{button.classList.add("wrong");msg.textContent="Belum tepat, yuk coba lagi!";msg.style.color="#db536b";tone(180,.18,"square");setTimeout(()=>button.classList.remove("wrong"),450)}}
-    const partSets={easy:["Kepala","Kaki"],medium:["Kepala","Badan","Kaki"],hard:["Kepala","Telinga","Mata","Badan","Kaki","Ekor"]};
-    const positions={Kepala:[54,18],Telinga:[66,12],Mata:[57,29],Badan:[45,52],Kaki:[52,79],Ekor:[25,53]};
-    const zones={Kepala:[2,8],Telinga:[69,8],Mata:[69,27],Badan:[2,45],Kaki:[69,58],Ekor:[2,68]};
-    function renderDecomp(){selectedLabel=null;const parts=partSets[level],targets=document.getElementById("drop-targets"),bank=document.getElementById("label-bank");targets.replaceChildren();bank.replaceChildren();document.getElementById("decomp-feedback").textContent="";document.getElementById("decomp-finish").classList.add("is-hidden");parts.forEach(part=>{const p=positions[part],z=zones[part],mark=document.createElement("span"),line=document.createElement("span"),drop=document.createElement("button");mark.className="part-marker";mark.style.left=p[0]+"%";mark.style.top=p[1]+"%";line.className="pointer-line";line.style.left=p[0]+"%";line.style.top=p[1]+"%";line.style.width="19%";line.style.transform=`rotate(${z[0]<p[0]?180:0}deg)`;drop.type="button";drop.className="drop-zone";drop.dataset.part=part;drop.style.left=z[0]+"%";drop.style.top=z[1]+"%";drop.textContent="Taruh jawaban di sini";drop.addEventListener("dragover",e=>{e.preventDefault();drop.classList.add("over")});drop.addEventListener("dragleave",()=>drop.classList.remove("over"));drop.addEventListener("drop",e=>{e.preventDefault();drop.classList.remove("over");selectedLabel=document.querySelector(`[data-part="${e.dataTransfer.getData("text/plain")}"]`);place(drop)});targets.append(mark,line,drop)});parts.forEach(part=>{const b=document.createElement("button");b.type="button";b.draggable=true;b.dataset.part=part;b.className="label-chip button-3d bg-[#ffd95a] px-3 py-3 font-extrabold";b.textContent=part;b.addEventListener("dragstart",e=>{selectedLabel=b;e.dataTransfer.setData("text/plain",part)});bank.append(b)})}
-    function place(zone){if(!selectedLabel||zone.dataset.done)return;const msg=document.getElementById("decomp-feedback");if(selectedLabel.dataset.part===zone.dataset.part){zone.dataset.done="yes";zone.textContent=selectedLabel.textContent;zone.classList.add("correct");selectedLabel.classList.add("used");selectedLabel.classList.remove("selected");selectedLabel=null;msg.textContent="Bagus, tepat sekali!";msg.style.color="#26925c";success();if(document.querySelectorAll(".drop-zone[data-done='yes']").length===partSets[level].length){document.getElementById("decomp-finish").classList.remove("is-hidden");celebrate()}}else{msg.textContent="Coba garis dan tempat yang lain ya!";msg.style.color="#db536b";tone(180,.18,"square")}}
-    function renderPattern(){const sequence=level==="easy"?["🐮","🐱","🐮"]:level==="medium"?["🐮","🐱","🐴","🐮","🐱"]:["🐮","🐮","🐱","🐱","🐮","🐮"],answer=level==="medium"?"🐴":"🐱",seq=document.getElementById("pattern-sequence"),ops=document.getElementById("pattern-options");seq.replaceChildren();ops.replaceChildren();document.getElementById("pattern-feedback").textContent="";document.getElementById("pattern-finish").classList.add("is-hidden");[...sequence,"❓"].forEach(x=>{const d=document.createElement("div");d.className="card flex h-20 w-20 items-center justify-center bg-white text-5xl";d.textContent=x;seq.append(d)});["🐮","🐱","🐴","🐶"].forEach(x=>{const b=document.createElement("button");b.className="answer-card bg-[#c7eafa] p-4 text-5xl";b.textContent=x;b.addEventListener("click",()=>{const m=document.getElementById("pattern-feedback");if(x===answer){b.classList.add("correct");m.textContent="Benar! Polanya lengkap! 🌟";m.style.color="#26925c";document.getElementById("pattern-finish").classList.remove("is-hidden");success();celebrate()}else{b.classList.add("wrong");m.textContent="Yuk, lihat polanya lagi!";m.style.color="#db536b";tone(180,.18,"square");setTimeout(()=>b.classList.remove("wrong"),400)}});ops.append(b)})}
-    document.getElementById("name-form").addEventListener("submit",e=>{e.preventDefault();const input=document.getElementById("child-name");if(!input.value.trim()){document.getElementById("name-message").textContent="Tulis namamu dulu, ya!";input.focus();return}childName=input.value.trim();document.getElementById("greeting-name").textContent=childName+"!";document.getElementById("welcome-screen").classList.remove("active");document.getElementById("game-screen").classList.add("active");tone(600,.12)});
-    document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{show(b.dataset.open);if(b.dataset.open==="quiz-view"){quizIndex=0;document.getElementById("quiz-finish").classList.add("is-hidden");renderQuiz()}}));
-    document.querySelectorAll(".back-menu").forEach(b=>b.addEventListener("click",()=>show("menu-view")));document.getElementById("home-button").addEventListener("click",()=>show("menu-view"));document.getElementById("change-name").addEventListener("click",()=>{document.getElementById("game-screen").classList.remove("active");document.getElementById("welcome-screen").classList.add("active");document.getElementById("child-name").value=childName});
-    document.getElementById("sound-button").addEventListener("click",()=>{soundOn=!soundOn;document.getElementById("sound-icon").setAttribute("data-lucide",soundOn?"volume-2":"volume-x");lucide.createIcons();if(soundOn)tone()});
-    document.querySelectorAll("[data-animal]").forEach(b=>b.addEventListener("click",()=>{animal=b.dataset.animal;updateAnimal();tone(animals[animal].tone,.1)}));document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;document.querySelectorAll(".tab-btn").forEach(x=>x.classList.remove("active"));b.classList.add("active");updateAnimal()}));document.getElementById("animal-sound").addEventListener("click",()=>{if(!soundOn)return;const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const ctx=new C();const now=ctx.currentTime;function call(freqs,duration,wave="triangle",gain=.09){const osc=ctx.createOscillator(),amp=ctx.createGain(),filter=ctx.createBiquadFilter();osc.type=wave;filter.type="lowpass";filter.frequency.value=wave==="sawtooth"?900:1800;osc.frequency.setValueAtTime(freqs[0],now);freqs.forEach((f,i)=>osc.frequency.linearRampToValueAtTime(f,now+duration*(i+1)/freqs.length));amp.gain.setValueAtTime(.001,now);amp.gain.linearRampToValueAtTime(gain,now+.06);amp.gain.setValueAtTime(gain,now+duration*.72);amp.gain.exponentialRampToValueAtTime(.001,now+duration);osc.connect(filter);filter.connect(amp);amp.connect(ctx.destination);osc.start(now);osc.stop(now+duration)}const sounds={cow:()=>call([82,96,118,142,126,108,92,78],1.45,"triangle",.11),goat:()=>call([320,470,275,410,250,360],.78,"triangle",.075),cat:()=>call([760,620,480,390,520],.9,"triangle",.06),horse:()=>call([240,380,520,430,600,360],1.05,"sawtooth",.05),dog:()=>{call([175,105,155],.26,"triangle",.12);setTimeout(()=>{if(soundOn)call([165,95,145],.26,"triangle",.12)},340)}};sounds[animal]();setTimeout(()=>ctx.close(),1800)});
-    document.getElementById("quiz-restart").addEventListener("click",()=>{quizIndex=0;document.getElementById("quiz-finish").classList.add("is-hidden");renderQuiz()});
-    document.querySelectorAll("[data-game]").forEach(b=>b.addEventListener("click",()=>{game=b.dataset.game;document.getElementById("selected-game-name").textContent=game==="decomp"?"Game Dekomposisi":"Game Pola Gambar";show("levels-view")}));document.querySelectorAll("[data-level]").forEach(b=>b.addEventListener("click",()=>{level=b.dataset.level;if(game==="decomp"){show("decomp-view");renderDecomp()}else{show("pattern-view");renderPattern()}}));document.getElementById("back-levels").addEventListener("click",()=>show("games-view"));document.getElementById("back-decomp").addEventListener("click",()=>show("levels-view"));document.getElementById("back-pattern").addEventListener("click",()=>show("levels-view"));
-    updateAnimal();lucide.createIcons();
-  </script>
- </body>
+
+</body>
 </html>
